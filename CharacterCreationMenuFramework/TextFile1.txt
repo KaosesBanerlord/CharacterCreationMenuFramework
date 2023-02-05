@@ -1,0 +1,14 @@
+﻿TODO
+
+set selected option by menuId in a dictionary
+
+refactory the storymode class name to be be  a more generic
+
+look to optional set and remove brother
+
+can we allow little siblings in sandbox How
+
+can I allow setting ther number of each little sibling
+
+can we convert brother to a sister
+
