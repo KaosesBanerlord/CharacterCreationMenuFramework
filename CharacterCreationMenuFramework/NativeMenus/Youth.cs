@@ -7,13 +7,14 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
+using TaleWorlds.Library;
 
 namespace CharacterCreationMenuFramework.NativeMenus
 {
     public class Youth : ICustomMenu
     {
         public string Id => "native_youth";
-        public TextObject title => new TextObject("{=ok8lSW6M}Youth");
+        public TextObject title => new TextObject("{=ok8lSW6M}Native Youth");
         /*        private TextObject _title = new TextObject("{=b4lDDcli}Kaoses Family");
                 public TextObject title { get => _title; set => _title = value }*/
 
@@ -51,11 +52,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
         public void BuildYouthOptions(CharacterCreation characterCreation, KaosesStoryModeCharacterCreationContent characterCreationContent)
         {
             CMenuOption menuCommandersStaff = new CMenuOption(new TextObject("{=CITG915d}joined a commander's staff."), new TextObject("{=Ay0G3f7I}Your family arranged for you to be part of the staff of an imperial strategos. You were not given major responsibilities - mostly carrying messages and tending to his horse -- but it did give you a chance to see how campaigns were planned and men were deployed in battle."));
-            menuCommandersStaff.effectedSkills = new List<SkillObject>()
+            menuCommandersStaff.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Steward,
                     DefaultSkills.Tactics
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuCommandersStaff.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuCommandersStaff.focusToAdd = characterCreationContent.FocusToAdd;
             menuCommandersStaff.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -66,11 +67,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuCommandersStaff.Id = "ny_commandersstaff";
 
             CMenuOption menuBaronsGroom = new CMenuOption(new TextObject("{=bhE2i6OU}served as a baron's groom."), new TextObject("{=iZKtGI6Y}Your family arranged for you to accompany a minor baron of the Vlandian kingdom. You were not given major responsibilities - mostly carrying messages and tending to his horse -- but it did give you a chance to see how campaigns were planned and men were deployed in battle."));
-            menuBaronsGroom.effectedSkills = new List<SkillObject>()
+            menuBaronsGroom.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Steward,
                     DefaultSkills.Tactics
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuBaronsGroom.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuBaronsGroom.focusToAdd = characterCreationContent.FocusToAdd;
             menuBaronsGroom.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -81,11 +82,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuBaronsGroom.Id = "ny_baronsgroom";
 
             CMenuOption menuChieftainsServant = new CMenuOption(new TextObject("{=F2bgujPo}were a chieftain's servant."), new TextObject("{=7AYJ3SjK}Your family arranged for you to accompany a chieftain of your people. You were not given major responsibilities - mostly carrying messages and tending to his horse -- but it did give you a chance to see how campaigns were planned and men were deployed in battle."));
-            menuChieftainsServant.effectedSkills = new List<SkillObject>()
+            menuChieftainsServant.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Steward,
                     DefaultSkills.Tactics
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuChieftainsServant.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuChieftainsServant.focusToAdd = characterCreationContent.FocusToAdd;
             menuChieftainsServant.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -96,11 +97,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuChieftainsServant.Id = "ny_chieftainsservant";
 
             CMenuOption menuTrainedWithCavalry = new CMenuOption(new TextObject("{=h2KnarLL}trained with the cavalry."), new TextObject("{=7cHsIMLP}You could never have bought the equipment on your own, but you were a good enough rider so that the local lord lent you a horse and equipment. You joined the armored cavalry, training with the lance."));
-            menuTrainedWithCavalry.effectedSkills = new List<SkillObject>()
+            menuTrainedWithCavalry.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Polearm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuTrainedWithCavalry.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuTrainedWithCavalry.focusToAdd = characterCreationContent.FocusToAdd;
             menuTrainedWithCavalry.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -111,11 +112,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuTrainedWithCavalry.Id = "ny_trainedwithcavalry";
 
             CMenuOption menuTrainedWithHearthGuard = new CMenuOption(new TextObject("{=zsC2t5Hb}trained with the hearth guard."), new TextObject("{=RmbWW6Bm}You were a big and imposing enough youth that the chief's guard allowed you to train alongside them, in preparation to join them some day."));
-            menuTrainedWithHearthGuard.effectedSkills = new List<SkillObject>()
+            menuTrainedWithHearthGuard.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Polearm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuTrainedWithHearthGuard.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuTrainedWithHearthGuard.focusToAdd = characterCreationContent.FocusToAdd;
             menuTrainedWithHearthGuard.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -126,11 +127,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuTrainedWithHearthGuard.Id = "ny_trainedwithhearthguard";
 
             CMenuOption menuGuardWithGarrison = new CMenuOption(new TextObject("{=aTncHUfL}stood guard with the garrisons."), new TextObject("{=63TAYbkx}Urban troops spend much of their time guarding the town walls. Most of their training was in missile weapons, especially useful during sieges."));
-            menuGuardWithGarrison.effectedSkills = new List<SkillObject>()
+            menuGuardWithGarrison.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Crossbow,
                     DefaultSkills.Engineering
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuGuardWithGarrison.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuGuardWithGarrison.focusToAdd = characterCreationContent.FocusToAdd;
             menuGuardWithGarrison.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -141,11 +142,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuGuardWithGarrison.Id = "ny_guardwithgarrison";
 
             CMenuOption menuGuardWithGarrison2 = new CMenuOption(new TextObject("{=aTncHUfL}stood guard with the garrisons."), new TextObject("{=1EkEElZd}Urban troops spend much of their time guarding the town walls. Most of their training was in missile weapons."));
-            menuGuardWithGarrison2.effectedSkills = new List<SkillObject>()
+            menuGuardWithGarrison2.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Bow,
                     DefaultSkills.Engineering
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuGuardWithGarrison2.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuGuardWithGarrison2.focusToAdd = characterCreationContent.FocusToAdd;
             menuGuardWithGarrison2.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -156,11 +157,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuGuardWithGarrison2.Id = "ny_guardwithgarrisonother";
 
             CMenuOption menuRodeWithScouts = new CMenuOption(new TextObject("{=VlXOgIX6}rode with the scouts."), new TextObject("{=888lmJqs}All of Calradia's kingdoms recognize the value of good light cavalry and horse archers, and are sure to recruit nomads and borderers with the skills to fulfill those duties. You were a good enough rider that your neighbors pitched in to buy you a small pony and a good bow so that you could fulfill their levy obligations."));
-            menuRodeWithScouts.effectedSkills = new List<SkillObject>()
+            menuRodeWithScouts.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Bow
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuRodeWithScouts.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuRodeWithScouts.focusToAdd = characterCreationContent.FocusToAdd;
             menuRodeWithScouts.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -171,11 +172,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuRodeWithScouts.Id = "ny_rodewithscouts";
 
             CMenuOption menuRodeWithScouts2 = new CMenuOption(new TextObject("{=VlXOgIX6}rode with the scouts."), new TextObject("{=sYuN6hPD}All of Calradia's kingdoms recognize the value of good light cavalry, and are sure to recruit nomads and borderers with the skills to fulfill those duties. You were a good enough rider that your neighbors pitched in to buy you a small pony and a sheaf of javelins so that you could fulfill their levy obligations."));
-            menuRodeWithScouts2.effectedSkills = new List<SkillObject>()
+            menuRodeWithScouts2.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Bow
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuRodeWithScouts2.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuRodeWithScouts2.focusToAdd = characterCreationContent.FocusToAdd;
             menuRodeWithScouts2.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -186,11 +187,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuRodeWithScouts2.Id = "ny_rodewithscoutsother";
 
             CMenuOption menuTrainedWithInfantry = new CMenuOption(new TextObject("{=a8arFSra}trained with the infantry."), new TextObject("{=afH90aNs}Levy armed with spear and shield, drawn from smallholding farmers, have always been the backbone of most armies of Calradia."));
-            menuTrainedWithInfantry.effectedSkills = new List<SkillObject>()
+            menuTrainedWithInfantry.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Polearm,
                     DefaultSkills.OneHanded
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuTrainedWithInfantry.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuTrainedWithInfantry.focusToAdd = characterCreationContent.FocusToAdd;
             menuTrainedWithInfantry.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -201,11 +202,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuTrainedWithInfantry.Id = "ny_trainedwithinfantry";
 
             CMenuOption menuJoinedSkirmishers = new CMenuOption(new TextObject("{=oMbOIPc9}joined the skirmishers."), new TextObject("{=bXAg5w19}Younger recruits, or those of a slighter build, or those too poor to buy shield and armor tend to join the skirmishers. Fighting with bow and javelin, they try to stay out of reach of the main enemy forces."));
-            menuJoinedSkirmishers.effectedSkills = new List<SkillObject>()
+            menuJoinedSkirmishers.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Throwing,
                     DefaultSkills.OneHanded
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuJoinedSkirmishers.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuJoinedSkirmishers.focusToAdd = characterCreationContent.FocusToAdd;
             menuJoinedSkirmishers.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -216,11 +217,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuJoinedSkirmishers.Id = "ny_joinedskirmishers";
 
             CMenuOption menuJoinedKern = new CMenuOption(new TextObject("{=cDWbwBwI}joined the kern."), new TextObject("{=tTb28jyU}Many Battanians fight as kern, versatile troops who could both harass the enemy line with their javelins or join in the final screaming charge once it weakened."));
-            menuJoinedKern.effectedSkills = new List<SkillObject>()
+            menuJoinedKern.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Throwing,
                     DefaultSkills.OneHanded
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuJoinedKern.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuJoinedKern.focusToAdd = characterCreationContent.FocusToAdd;
             menuJoinedKern.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -231,11 +232,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuJoinedKern.Id = "ny_joinedker";
 
             CMenuOption menuCampFollowers = new CMenuOption(new TextObject("{=GFUggps8}marched with the camp followers."), new TextObject("{=64rWqBLN}You avoided service with one of the main forces of your realm's armies, but followed instead in the train - the troops' wives, lovers and servants, and those who make their living by caring for, entertaining, or cheating the soldiery."));
-            menuCampFollowers.effectedSkills = new List<SkillObject>()
+            menuCampFollowers.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Roguery,
                     DefaultSkills.Throwing
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuCampFollowers.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuCampFollowers.focusToAdd = characterCreationContent.FocusToAdd;
             menuCampFollowers.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;

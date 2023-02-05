@@ -45,7 +45,7 @@ namespace CharacterCreationMenuFramework.StartObj
         }
 
         //AddCategoryOption(TextObject text,
-        //List<SkillObject> effectedSkills,
+        //MBList<SkillObject> effectedSkills,
         //CharacterAttribute effectedAttribute,
         //int focusToAdd, int skillLevelToAdd,
         //int attributeLevelToAdd,
@@ -65,7 +65,7 @@ namespace CharacterCreationMenuFramework.StartObj
             //CharacterCreationCategory creationCategory1 = menu.AddMenuCategory(new CharacterCreationOnCondition(this.EmpireParentsOnCondition));
 
             //()
-            /*            creationCategory1.AddCategoryOption(new TextObject("{=InN5ZZt3}A landlord's retainers"), new List<SkillObject>()
+            /*            creationCategory1.AddCategoryOption(new TextObject("{=InN5ZZt3}A landlord's retainers"), new MBList<SkillObject>()
                           {
                             DefaultSkills.Riding,
                             DefaultSkills.Polearm

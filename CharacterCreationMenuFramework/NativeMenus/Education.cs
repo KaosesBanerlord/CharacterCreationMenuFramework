@@ -12,13 +12,14 @@ using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
 using static CharacterCreationMenuFramework.Enums;
+using TaleWorlds.Library;
 
 namespace CharacterCreationMenuFramework.NativeMenus
 {
     public class Education : ICustomMenu
     {
         public string Id => "native_education";
-        public TextObject title => new TextObject("{=rcoueCmk}Adolescence");
+        public TextObject title => new TextObject("{=rcoueCmk}Native Adolescence");
         /*        private TextObject _title = new TextObject("{=b4lDDcli}Kaoses Family");
                 public TextObject title { get => _title; set => _title = value }*/
 
@@ -55,11 +56,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
         public void BuildEducationOptions(CharacterCreation characterCreation, KaosesStoryModeCharacterCreationContent characterCreationContent)
         {
             CMenuOption menuHerdedSheep = new CMenuOption(new TextObject("{=RKVNvimC}herded the sheep."), new TextObject("{=KfaqPpbK}You went with other fleet-footed youths to take the villages' sheep, goats or cattle to graze in pastures near the village. You were in charge of chasing down stray beasts, and always kept a big stone on hand to be hurled at lurking predators if necessary."));
-            menuHerdedSheep.effectedSkills = new List<SkillObject>()
+            menuHerdedSheep.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Athletics,
                     DefaultSkills.Throwing
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuHerdedSheep.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuHerdedSheep.focusToAdd = characterCreationContent.FocusToAdd;
             menuHerdedSheep.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -70,11 +71,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuHerdedSheep.Id = "ne_herdedsheep";
 
             CMenuOption menuVillageSmithy = new CMenuOption(new TextObject("{=bTKiN0hr}worked in the village smithy."), new TextObject("{=y6j1bJTH}You were apprenticed to the local smith. You learned how to heat and forge metal, hammering for hours at a time until your muscles ached."));
-            menuVillageSmithy.effectedSkills = new List<SkillObject>()
+            menuVillageSmithy.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.TwoHanded,
                     DefaultSkills.Crafting
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuVillageSmithy.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuVillageSmithy.focusToAdd = characterCreationContent.FocusToAdd;
             menuVillageSmithy.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -85,11 +86,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuVillageSmithy.Id = "ne_workedvillagesmithy";
 
             CMenuOption menuRepairedProjects = new CMenuOption(new TextObject("{=tI8ZLtoA}repaired projects."), new TextObject("{=6LFj919J}You helped dig wells, rethatch houses, and fix broken plows. You learned about the basics of construction, as well as what it takes to keep a farming community prosperous."));
-            menuRepairedProjects.effectedSkills = new List<SkillObject>()
+            menuRepairedProjects.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Crafting,
                     DefaultSkills.Engineering
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuRepairedProjects.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuRepairedProjects.focusToAdd = characterCreationContent.FocusToAdd;
             menuRepairedProjects.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -100,11 +101,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuRepairedProjects.Id = "ne_repairedprojects";
 
             CMenuOption menuGathering = new CMenuOption(new TextObject("{=TRwgSLD2}gathered herbs in the wild."), new TextObject("{=9ks4u5cH}You were sent by the village healer up into the hills to look for useful medicinal plants. You learned which herbs healed wounds or brought down a fever, and how to find them."));
-            menuGathering.effectedSkills = new List<SkillObject>()
+            menuGathering.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Medicine,
                     DefaultSkills.Scouting
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuGathering.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuGathering.focusToAdd = characterCreationContent.FocusToAdd;
             menuGathering.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -115,11 +116,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuGathering.Id = "ne_gatheredherbswild";
 
             CMenuOption menuHuntedSmallGame = new CMenuOption(new TextObject("{=T7m7ReTq}hunted small game."), new TextObject("{=RuvSk3QT}You accompanied a local hunter as he went into the wilderness, helping him set up traps and catch small animals."));
-            menuHuntedSmallGame.effectedSkills = new List<SkillObject>()
+            menuHuntedSmallGame.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Bow,
                     DefaultSkills.Tactics
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuHuntedSmallGame.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuHuntedSmallGame.focusToAdd = characterCreationContent.FocusToAdd;
             menuHuntedSmallGame.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -130,11 +131,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuHuntedSmallGame.Id = "ne_huntedsmallgame";
 
             CMenuOption menuWorkedMarket = new CMenuOption(new TextObject("{=qAbMagWq}sold product at the market."), new TextObject("{=DIgsfYfz}You took your family's goods to the nearest town to sell your produce and buy supplies. It was hard work, but you enjoyed the hubbub of the marketplace."));
-            menuWorkedMarket.effectedSkills = new List<SkillObject>()
+            menuWorkedMarket.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Trade,
                     DefaultSkills.Charm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuWorkedMarket.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuWorkedMarket.focusToAdd = characterCreationContent.FocusToAdd;
             menuWorkedMarket.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -145,11 +146,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuWorkedMarket.Id = "ne_soldproductsatmarket";
 
             CMenuOption menuTownWatch = new CMenuOption(new TextObject("{=nOfSqRnI}at the town watch's training ground."), new TextObject("{=qnqdEJOv}You watched the town's watch practice shooting and perfect their plans to defend the walls in case of a siege."));
-            menuTownWatch.effectedSkills = new List<SkillObject>()
+            menuTownWatch.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Crossbow,
                     DefaultSkills.Tactics
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuTownWatch.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuTownWatch.focusToAdd = characterCreationContent.FocusToAdd;
             menuTownWatch.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -160,11 +161,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuTownWatch.Id = "ne_townwatchtrainingground";
 
             CMenuOption menuAlleyGangs = new CMenuOption(new TextObject("{=8a6dnLd2}with the alley gangs."), new TextObject("{=1SUTcF0J}The gang leaders who kept watch over the slums of Calradian cities were always in need of poor youth to run messages and back them up in turf wars, while thrill-seeking merchants' sons and daughters sometimes slummed it in their company as well."));
-            menuAlleyGangs.effectedSkills = new List<SkillObject>()
+            menuAlleyGangs.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Roguery,
                     DefaultSkills.OneHanded
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuAlleyGangs.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuAlleyGangs.focusToAdd = characterCreationContent.FocusToAdd;
             menuAlleyGangs.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -175,11 +176,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuAlleyGangs.Id = "ne_withalleygangs";
 
             CMenuOption menuDocksAnBuilding = new CMenuOption(new TextObject("{=7Hv984Sf}at docks and building sites."), new TextObject("{=bhdkegZ4}All towns had their share of projects that were constantly in need of both skilled and unskilled labor. You learned how hoists and scaffolds were constructed, how planks and stones were hewn and fitted, and other skills."));
-            menuDocksAnBuilding.effectedSkills = new List<SkillObject>()
+            menuDocksAnBuilding.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Athletics,
                     DefaultSkills.Crafting
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuDocksAnBuilding.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuDocksAnBuilding.focusToAdd = characterCreationContent.FocusToAdd;
             menuDocksAnBuilding.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -190,11 +191,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuDocksAnBuilding.Id = "ne_dockanbuildingsites";
 
             CMenuOption menuCaravanserais = new CMenuOption(new TextObject("{=kbcwb5TH}in the markets and caravanserais."), new TextObject("{=lLJh7WAT}You worked in the marketplace, selling trinkets and drinks to busy shoppers."));
-            menuCaravanserais.effectedSkills = new List<SkillObject>()
+            menuCaravanserais.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Trade,
                     DefaultSkills.Charm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuCaravanserais.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuCaravanserais.focusToAdd = characterCreationContent.FocusToAdd;
             menuCaravanserais.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -205,11 +206,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuCaravanserais.Id = "ne_marketsandcaravanserais";
 
             CMenuOption menuMarketsAnCaravanserais = new CMenuOption(new TextObject("{=kbcwb5TH}in the markets and caravanserais."), new TextObject("{=rmMcwSn8}You helped your family handle their business affairs, going down to the marketplace to make purchases and oversee the arrival of caravans."));
-            menuMarketsAnCaravanserais.effectedSkills = new List<SkillObject>()
+            menuMarketsAnCaravanserais.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Trade,
                     DefaultSkills.Charm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuMarketsAnCaravanserais.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuMarketsAnCaravanserais.focusToAdd = characterCreationContent.FocusToAdd;
             menuMarketsAnCaravanserais.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -220,11 +221,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuMarketsAnCaravanserais.Id = "ne_marketsandcaravanserairich";
 
             CMenuOption menuReadingAnStudying = new CMenuOption(new TextObject("{=mfRbx5KE}reading and studying."), new TextObject("{=elQnygal}Your family scraped up the money for a rudimentary schooling and you took full advantage, reading voraciously on history, mathematics, and philosophy and discussing what you read with your tutor and classmates."));
-            menuReadingAnStudying.effectedSkills = new List<SkillObject>()
+            menuReadingAnStudying.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Engineering,
                     DefaultSkills.Leadership
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuReadingAnStudying.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuReadingAnStudying.focusToAdd = characterCreationContent.FocusToAdd;
             menuReadingAnStudying.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -235,11 +236,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuReadingAnStudying.Id = "ne_readinganstudying";
 
             CMenuOption menuWithTutor = new CMenuOption(new TextObject("{=etG87fB7}with your tutor."), new TextObject("{=hXl25avg}Your family arranged for a private tutor and you took full advantage, reading voraciously on history, mathematics, and philosophy and discussing what you read with your tutor and classmates."));
-            menuWithTutor.effectedSkills = new List<SkillObject>()
+            menuWithTutor.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Engineering,
                     DefaultSkills.Leadership
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuWithTutor.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuWithTutor.focusToAdd = characterCreationContent.FocusToAdd;
             menuWithTutor.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -250,11 +251,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuWithTutor.Id = "ne_withyourtutor";
 
             CMenuOption menuCaringHorses = new CMenuOption(new TextObject("{=FKpLEamz}caring for horses."), new TextObject("{=Ghz90npw}Your family owned a few horses at the town stables and you took charge of their care. Many evenings you would take them out beyond the walls and gallup through the fields, racing other youth."));
-            menuCaringHorses.effectedSkills = new List<SkillObject>()
+            menuCaringHorses.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Steward
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuCaringHorses.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuCaringHorses.focusToAdd = characterCreationContent.FocusToAdd;
             menuCaringHorses.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -265,11 +266,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuCaringHorses.Id = "ne_caringforhorses";
 
             CMenuOption menuWorkingStables = new CMenuOption(new TextObject("{=vH7GtuuK}working at the stables."), new TextObject("{=csUq1RCC}You were employed as a hired hand at the town's stables. The overseers recognized that you had a knack for horses, and you were allowed to exercise them and sometimes even break in new steeds."));
-            menuWorkingStables.effectedSkills = new List<SkillObject>()
+            menuWorkingStables.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Steward
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuWorkingStables.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuWorkingStables.focusToAdd = characterCreationContent.FocusToAdd;
             menuWorkingStables.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;

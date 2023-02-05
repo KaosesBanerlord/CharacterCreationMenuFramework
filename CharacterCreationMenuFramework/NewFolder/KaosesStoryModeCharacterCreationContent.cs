@@ -208,34 +208,34 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             // CULTURE EQUALS EMPIRE MENU OPTIONS
             CharacterCreationCategory creationCategory1 = menu.AddMenuCategory(new CharacterCreationOnCondition(this.EmpireParentsOnCondition));
-            creationCategory1.AddCategoryOption(new TextObject("{=InN5ZZt3}A landlord's retainers"), new List<SkillObject>()
+            creationCategory1.AddCategoryOption(new TextObject("{=InN5ZZt3}A landlord's retainers"), new MBList<SkillObject>()
               {
                 DefaultSkills.Riding,
                 DefaultSkills.Polearm
               }, DefaultCharacterAttributes.Vigor, this.FocusToAdd, this.SkillLevelToAdd, this.AttributeLevelToAdd, (CharacterCreationOnCondition)null, new CharacterCreationOnSelect(this.EmpireLandlordsRetainerOnConsequence), new CharacterCreationApplyFinalEffects(this.EmpireLandlordsRetainerOnApply), new TextObject("{=ivKl4mV2}Your father was a trusted lieutenant of the local landowning aristocrat. He rode with the lord's cavalry, fighting as an armored lancer."));
 
 
-            creationCategory1.AddCategoryOption(new TextObject("{=651FhzdR}Urban merchants"), new List<SkillObject>()
+            creationCategory1.AddCategoryOption(new TextObject("{=651FhzdR}Urban merchants"), new MBList<SkillObject>()
                   {
                     DefaultSkills.Trade,
                     DefaultSkills.Charm
                   }, DefaultCharacterAttributes.Social, this.FocusToAdd, this.SkillLevelToAdd, this.AttributeLevelToAdd, (CharacterCreationOnCondition)null, new CharacterCreationOnSelect(this.EmpireMerchantOnConsequence), new CharacterCreationApplyFinalEffects(this.EmpireMerchantOnApply), new TextObject("{=FQntPChs}Your family were merchants in one of the main cities of the Empire. They sometimes organized caravans to nearby towns, and discussed issues in the town council."));
-            creationCategory1.AddCategoryOption(new TextObject("{=sb4gg8Ak}Freeholders"), new List<SkillObject>()
+            creationCategory1.AddCategoryOption(new TextObject("{=sb4gg8Ak}Freeholders"), new MBList<SkillObject>()
                   {
                     DefaultSkills.Athletics,
                     DefaultSkills.Polearm
                   }, DefaultCharacterAttributes.Endurance, this.FocusToAdd, this.SkillLevelToAdd, this.AttributeLevelToAdd, (CharacterCreationOnCondition)null, new CharacterCreationOnSelect(this.EmpireFreeholderOnConsequence), new CharacterCreationApplyFinalEffects(this.EmpireFreeholderOnApply), new TextObject("{=09z8Q08f}Your family were small farmers with just enough land to feed themselves and make a small profit. People like them were the pillars of the imperial rural economy, as well as the backbone of the levy."));
-            creationCategory1.AddCategoryOption(new TextObject("{=v48N6h1t}Urban artisans"), new List<SkillObject>()
+            creationCategory1.AddCategoryOption(new TextObject("{=v48N6h1t}Urban artisans"), new MBList<SkillObject>()
                   {
                     DefaultSkills.Crafting,
                     DefaultSkills.Crossbow
                   }, DefaultCharacterAttributes.Intelligence, this.FocusToAdd, this.SkillLevelToAdd, this.AttributeLevelToAdd, (CharacterCreationOnCondition)null, new CharacterCreationOnSelect(this.EmpireArtisanOnConsequence), new CharacterCreationApplyFinalEffects(this.EmpireArtisanOnApply), new TextObject("{=ZKynvffv}Your family owned their own workshop in a city, making goods from raw materials brought in from the countryside. Your father played an active if minor role in the town council, and also served in the militia."));
-            creationCategory1.AddCategoryOption(new TextObject("{=7eWmU2mF}Foresters"), new List<SkillObject>()
+            creationCategory1.AddCategoryOption(new TextObject("{=7eWmU2mF}Foresters"), new MBList<SkillObject>()
                   {
                     DefaultSkills.Scouting,
                     DefaultSkills.Bow
                   }, DefaultCharacterAttributes.Control, this.FocusToAdd, this.SkillLevelToAdd, this.AttributeLevelToAdd, (CharacterCreationOnCondition)null, new CharacterCreationOnSelect(this.EmpireWoodsmanOnConsequence), new CharacterCreationApplyFinalEffects(this.EmpireWoodsmanOnApply), new TextObject("{=yRFSzSDZ}Your family lived in a village, but did not own their own land. Instead, your father supplemented paid jobs with long trips in the woods, hunting and trapping, always keeping a wary eye for the lord's game wardens."));
-            creationCategory1.AddCategoryOption(new TextObject("{=aEke8dSb}Urban vagabonds"), new List<SkillObject>()
+            creationCategory1.AddCategoryOption(new TextObject("{=aEke8dSb}Urban vagabonds"), new MBList<SkillObject>()
                   {
                     DefaultSkills.Roguery,
                     DefaultSkills.Throwing
@@ -243,32 +243,32 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             // CULTURE EQUALS Vlandian
             CharacterCreationCategory creationCategory2 = menu.AddMenuCategory(new CharacterCreationOnCondition(this.VlandianParentsOnCondition));
-            creationCategory2.AddCategoryOption(new TextObject("{=2TptWc4m}A baron's retainers"), new List<SkillObject>()
+            creationCategory2.AddCategoryOption(new TextObject("{=2TptWc4m}A baron's retainers"), new MBList<SkillObject>()
                       {
                         DefaultSkills.Riding,
                         DefaultSkills.Polearm
                       }, DefaultCharacterAttributes.Social, this.FocusToAdd, this.SkillLevelToAdd, this.AttributeLevelToAdd, (CharacterCreationOnCondition)null, new CharacterCreationOnSelect(this.VlandiaBaronsRetainerOnConsequence), new CharacterCreationApplyFinalEffects(this.VlandiaBaronsRetainerOnApply), new TextObject("{=0Suu1Q9q}Your father was a bailiff for a local feudal magnate. He looked after his liege's estates, resolved disputes in the village, and helped train the village levy. He rode with the lord's cavalry, fighting as an armored knight."));
-            creationCategory2.AddCategoryOption(new TextObject("{=651FhzdR}Urban merchants"), new List<SkillObject>()
+            creationCategory2.AddCategoryOption(new TextObject("{=651FhzdR}Urban merchants"), new MBList<SkillObject>()
                       {
                         DefaultSkills.Trade,
                         DefaultSkills.Charm
                       }, DefaultCharacterAttributes.Intelligence, this.FocusToAdd, this.SkillLevelToAdd, this.AttributeLevelToAdd, (CharacterCreationOnCondition)null, new CharacterCreationOnSelect(this.VlandiaMerchantOnConsequence), new CharacterCreationApplyFinalEffects(this.VlandiaMerchantOnApply), new TextObject("{=qNZFkxJb}Your family were merchants in one of the main cities of the kingdom. They organized caravans to nearby towns and were active in the local merchant's guild."));
-            creationCategory2.AddCategoryOption(new TextObject("{=RDfXuVxT}Yeomen"), new List<SkillObject>()
+            creationCategory2.AddCategoryOption(new TextObject("{=RDfXuVxT}Yeomen"), new MBList<SkillObject>()
                       {
                         DefaultSkills.Polearm,
                         DefaultSkills.Crossbow
                       }, DefaultCharacterAttributes.Endurance, this.FocusToAdd, this.SkillLevelToAdd, this.AttributeLevelToAdd, (CharacterCreationOnCondition)null, new CharacterCreationOnSelect(this.VlandiaYeomanOnConsequence), new CharacterCreationApplyFinalEffects(this.VlandiaYeomanOnApply), new TextObject("{=BLZ4mdhb}Your family were small farmers with just enough land to feed themselves and make a small profit. People like them were the pillars of the kingdom's economy, as well as the backbone of the levy."));
-            creationCategory2.AddCategoryOption(new TextObject("{=p2KIhGbE}Urban blacksmith"), new List<SkillObject>()
+            creationCategory2.AddCategoryOption(new TextObject("{=p2KIhGbE}Urban blacksmith"), new MBList<SkillObject>()
                       {
                         DefaultSkills.Crafting,
                         DefaultSkills.TwoHanded
                       }, DefaultCharacterAttributes.Vigor, this.FocusToAdd, this.SkillLevelToAdd, this.AttributeLevelToAdd, (CharacterCreationOnCondition)null, new CharacterCreationOnSelect(this.VlandiaBlacksmithOnConsequence), new CharacterCreationApplyFinalEffects(this.VlandiaBlacksmithOnApply), new TextObject("{=btsMpRcA}Your family owned a smithy in a city. Your father played an active if minor role in the town council, and also served in the militia."));
-            creationCategory2.AddCategoryOption(new TextObject("{=YcnK0Thk}Hunters"), new List<SkillObject>()
+            creationCategory2.AddCategoryOption(new TextObject("{=YcnK0Thk}Hunters"), new MBList<SkillObject>()
                       {
                         DefaultSkills.Scouting,
                         DefaultSkills.Crossbow
                       }, DefaultCharacterAttributes.Control, this.FocusToAdd, this.SkillLevelToAdd, this.AttributeLevelToAdd, (CharacterCreationOnCondition)null, new CharacterCreationOnSelect(this.VlandiaHunterOnConsequence), new CharacterCreationApplyFinalEffects(this.VlandiaHunterOnApply), new TextObject("{=yRFSzSDZ}Your family lived in a village, but did not own their own land. Instead, your father supplemented paid jobs with long trips in the woods, hunting and trapping, always keeping a wary eye for the lord's game wardens."));
-            creationCategory2.AddCategoryOption(new TextObject("{=ipQP6aVi}Mercenaries"), new List<SkillObject>()
+            creationCategory2.AddCategoryOption(new TextObject("{=ipQP6aVi}Mercenaries"), new MBList<SkillObject>()
                       {
                         DefaultSkills.Roguery,
                         DefaultSkills.Crossbow
@@ -277,7 +277,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             // CULTURE EQUALS Sturgian
             CharacterCreationCategory creationCategory3 = menu.AddMenuCategory(new CharacterCreationOnCondition(this.SturgianParentsOnCondition));
             TextObject text1 = new TextObject("{=mc78FEbA}A boyar's companions");
-            List<SkillObject> effectedSkills1 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills1 = new MBList<SkillObject>();
             effectedSkills1.Add(DefaultSkills.Riding);
             effectedSkills1.Add(DefaultSkills.TwoHanded);
             CharacterAttribute social1 = DefaultCharacterAttributes.Social;
@@ -290,7 +290,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             creationCategory3.AddCategoryOption(text1, effectedSkills1, social1, focusToAdd1, skillLevelToAdd1, attributeLevelToAdd1, (CharacterCreationOnCondition)null, onSelect1, onApply1, descriptionText1);
             TextObject text2 = new TextObject("{=HqzVBfpl}Urban traders");
-            List<SkillObject> effectedSkills2 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills2 = new MBList<SkillObject>();
             effectedSkills2.Add(DefaultSkills.Trade);
             effectedSkills2.Add(DefaultSkills.Tactics);
             CharacterAttribute cunning1 = DefaultCharacterAttributes.Cunning;
@@ -303,7 +303,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             creationCategory3.AddCategoryOption(text2, effectedSkills2, cunning1, focusToAdd2, skillLevelToAdd2, attributeLevelToAdd2, (CharacterCreationOnCondition)null, onSelect2, onApply2, descriptionText2);
             TextObject text3 = new TextObject("{=zrpqSWSh}Free farmers");
-            List<SkillObject> effectedSkills3 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills3 = new MBList<SkillObject>();
             effectedSkills3.Add(DefaultSkills.Athletics);
             effectedSkills3.Add(DefaultSkills.Polearm);
             CharacterAttribute endurance1 = DefaultCharacterAttributes.Endurance;
@@ -316,7 +316,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             creationCategory3.AddCategoryOption(text3, effectedSkills3, endurance1, focusToAdd3, skillLevelToAdd3, attributeLevelToAdd3, (CharacterCreationOnCondition)null, onSelect3, onApply3, descriptionText3);
             TextObject text4 = new TextObject("{=v48N6h1t}Urban artisans");
-            List<SkillObject> effectedSkills4 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills4 = new MBList<SkillObject>();
             effectedSkills4.Add(DefaultSkills.Crafting);
             effectedSkills4.Add(DefaultSkills.OneHanded);
             CharacterAttribute intelligence1 = DefaultCharacterAttributes.Intelligence;
@@ -329,7 +329,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             creationCategory3.AddCategoryOption(text4, effectedSkills4, intelligence1, focusToAdd4, skillLevelToAdd4, attributeLevelToAdd4, (CharacterCreationOnCondition)null, onSelect4, onApply4, descriptionText4);
             TextObject text5 = new TextObject("{=YcnK0Thk}Hunters");
-            List<SkillObject> effectedSkills5 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills5 = new MBList<SkillObject>();
             effectedSkills5.Add(DefaultSkills.Scouting);
             effectedSkills5.Add(DefaultSkills.Bow);
             CharacterAttribute vigor1 = DefaultCharacterAttributes.Vigor;
@@ -342,7 +342,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             creationCategory3.AddCategoryOption(text5, effectedSkills5, vigor1, focusToAdd5, skillLevelToAdd5, attributeLevelToAdd5, (CharacterCreationOnCondition)null, onSelect5, onApply5, descriptionText5);
             TextObject text6 = new TextObject("{=TPoK3GSj}Vagabonds");
-            List<SkillObject> effectedSkills6 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills6 = new MBList<SkillObject>();
             effectedSkills6.Add(DefaultSkills.Roguery);
             effectedSkills6.Add(DefaultSkills.Throwing);
             CharacterAttribute control1 = DefaultCharacterAttributes.Control;
@@ -359,7 +359,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             // CULTURE EQUALS Aserai
             CharacterCreationCategory creationCategory4 = menu.AddMenuCategory(new CharacterCreationOnCondition(this.AseraiParentsOnCondition));
             TextObject text7 = new TextObject("{=Sw8OxnNr}Kinsfolk of an emir");
-            List<SkillObject> effectedSkills7 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills7 = new MBList<SkillObject>();
             effectedSkills7.Add(DefaultSkills.Riding);
             effectedSkills7.Add(DefaultSkills.Throwing);
             CharacterAttribute endurance2 = DefaultCharacterAttributes.Endurance;
@@ -372,7 +372,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             creationCategory4.AddCategoryOption(text7, effectedSkills7, endurance2, focusToAdd7, skillLevelToAdd7, attributeLevelToAdd7, (CharacterCreationOnCondition)null, onSelect7, onApply7, descriptionText7);
             TextObject text8 = new TextObject("{=ngFVgwDD}Warrior-slaves");
-            List<SkillObject> effectedSkills8 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills8 = new MBList<SkillObject>();
             effectedSkills8.Add(DefaultSkills.Riding);
             effectedSkills8.Add(DefaultSkills.Polearm);
             CharacterAttribute vigor2 = DefaultCharacterAttributes.Vigor;
@@ -385,7 +385,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             creationCategory4.AddCategoryOption(text8, effectedSkills8, vigor2, focusToAdd8, skillLevelToAdd8, attributeLevelToAdd8, (CharacterCreationOnCondition)null, onSelect8, onApply8, descriptionText8);
             TextObject text9 = new TextObject("{=651FhzdR}Urban merchants");
-            List<SkillObject> effectedSkills9 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills9 = new MBList<SkillObject>();
             effectedSkills9.Add(DefaultSkills.Trade);
             effectedSkills9.Add(DefaultSkills.Charm);
             CharacterAttribute social2 = DefaultCharacterAttributes.Social;
@@ -398,7 +398,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             creationCategory4.AddCategoryOption(text9, effectedSkills9, social2, focusToAdd9, skillLevelToAdd9, attributeLevelToAdd9, (CharacterCreationOnCondition)null, onSelect9, onApply9, descriptionText9);
             TextObject text10 = new TextObject("{=g31pXuqi}Oasis farmers");
-            List<SkillObject> effectedSkills10 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills10 = new MBList<SkillObject>();
             effectedSkills10.Add(DefaultSkills.Athletics);
             effectedSkills10.Add(DefaultSkills.OneHanded);
             CharacterAttribute endurance3 = DefaultCharacterAttributes.Endurance;
@@ -411,7 +411,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             creationCategory4.AddCategoryOption(text10, effectedSkills10, endurance3, focusToAdd10, skillLevelToAdd10, attributeLevelToAdd10, (CharacterCreationOnCondition)null, onSelect10, onApply10, descriptionText10);
             TextObject text11 = new TextObject("{=EEedqolz}Bedouin");
-            List<SkillObject> effectedSkills11 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills11 = new MBList<SkillObject>();
             effectedSkills11.Add(DefaultSkills.Scouting);
             effectedSkills11.Add(DefaultSkills.Bow);
             CharacterAttribute cunning2 = DefaultCharacterAttributes.Cunning;
@@ -424,7 +424,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             creationCategory4.AddCategoryOption(text11, effectedSkills11, cunning2, focusToAdd11, skillLevelToAdd11, attributeLevelToAdd11, (CharacterCreationOnCondition)null, onSelect11, onApply11, descriptionText11);
             TextObject text12 = new TextObject("{=tRIrbTvv}Urban back-alley thugs");
-            List<SkillObject> effectedSkills12 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills12 = new MBList<SkillObject>();
             effectedSkills12.Add(DefaultSkills.Roguery);
             effectedSkills12.Add(DefaultSkills.Polearm);
             CharacterAttribute control2 = DefaultCharacterAttributes.Control;
@@ -441,7 +441,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             // CULTURE EQUALS Battania
             CharacterCreationCategory creationCategory5 = menu.AddMenuCategory(new CharacterCreationOnCondition(this.BattanianParentsOnCondition));
             TextObject text13 = new TextObject("{=GeNKQlHR}Members of the chieftain's hearthguard");
-            List<SkillObject> effectedSkills13 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills13 = new MBList<SkillObject>();
             effectedSkills13.Add(DefaultSkills.TwoHanded);
             effectedSkills13.Add(DefaultSkills.Bow);
             CharacterAttribute vigor3 = DefaultCharacterAttributes.Vigor;
@@ -455,7 +455,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text14 = new TextObject("{=AeBzTj6w}Healers");
-            List<SkillObject> effectedSkills14 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills14 = new MBList<SkillObject>();
             effectedSkills14.Add(DefaultSkills.Medicine);
             effectedSkills14.Add(DefaultSkills.Charm);
             CharacterAttribute intelligence2 = DefaultCharacterAttributes.Intelligence;
@@ -469,7 +469,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text15 = new TextObject("{=tGEStbxb}Tribespeople");
-            List<SkillObject> effectedSkills15 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills15 = new MBList<SkillObject>();
             effectedSkills15.Add(DefaultSkills.Athletics);
             effectedSkills15.Add(DefaultSkills.Throwing);
             CharacterAttribute control3 = DefaultCharacterAttributes.Control;
@@ -483,7 +483,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text16 = new TextObject("{=BCU6RezA}Smiths");
-            List<SkillObject> effectedSkills16 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills16 = new MBList<SkillObject>();
             effectedSkills16.Add(DefaultSkills.Crafting);
             effectedSkills16.Add(DefaultSkills.TwoHanded);
             CharacterAttribute endurance4 = DefaultCharacterAttributes.Endurance;
@@ -497,7 +497,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text17 = new TextObject("{=7eWmU2mF}Foresters");
-            List<SkillObject> effectedSkills17 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills17 = new MBList<SkillObject>();
             effectedSkills17.Add(DefaultSkills.Scouting);
             effectedSkills17.Add(DefaultSkills.Tactics);
             CharacterAttribute cunning3 = DefaultCharacterAttributes.Cunning;
@@ -511,7 +511,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text18 = new TextObject("{=SpJqhEEh}Bards");
-            List<SkillObject> effectedSkills18 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills18 = new MBList<SkillObject>();
             effectedSkills18.Add(DefaultSkills.Roguery);
             effectedSkills18.Add(DefaultSkills.Charm);
             CharacterAttribute social3 = DefaultCharacterAttributes.Social;
@@ -530,7 +530,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             // CULTURE EQUALS Khuzait
             CharacterCreationCategory creationCategory6 = menu.AddMenuCategory(new CharacterCreationOnCondition(this.KhuzaitParentsOnCondition));
             TextObject text19 = new TextObject("{=FVaRDe2a}A noyan's kinsfolk");
-            List<SkillObject> effectedSkills19 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills19 = new MBList<SkillObject>();
             effectedSkills19.Add(DefaultSkills.Riding);
             effectedSkills19.Add(DefaultSkills.Polearm);
             CharacterAttribute endurance5 = DefaultCharacterAttributes.Endurance;
@@ -544,7 +544,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             TextObject descriptionText19 = new TextObject("{=jAs3kDXh}Your family were the trusted kinsfolk of a Khuzait noyan, and shared his meals in the chieftain's yurt. Your father assisted his chief in running the affairs of the clan and fought in the core of armored lancers in the center of the Khuzait battle line.");
             creationCategory6.AddCategoryOption(text19, effectedSkills19, endurance5, focusToAdd19, skillLevelToAdd19, attributeLevelToAdd19, (CharacterCreationOnCondition)null, onSelect19, onApply19, descriptionText19);
             TextObject text20 = new TextObject("{=TkgLEDRM}Merchants");
-            List<SkillObject> effectedSkills20 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills20 = new MBList<SkillObject>();
             effectedSkills20.Add(DefaultSkills.Trade);
             effectedSkills20.Add(DefaultSkills.Charm);
             CharacterAttribute social4 = DefaultCharacterAttributes.Social;
@@ -556,7 +556,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             TextObject descriptionText20 = new TextObject("{=qPg3IDiq}Your family came from one of the merchant clans that dominated the cities in eastern Calradia before the Khuzait conquest. They adjusted quickly to their new masters, keeping the caravan routes running and ensuring that the tariff revenues that once went into imperial coffers now flowed to the khanate.");
             creationCategory6.AddCategoryOption(text20, effectedSkills20, social4, focusToAdd20, skillLevelToAdd20, attributeLevelToAdd20, (CharacterCreationOnCondition)null, onSelect20, onApply20, descriptionText20);
             TextObject text21 = new TextObject("{=tGEStbxb}Tribespeople");
-            List<SkillObject> effectedSkills21 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills21 = new MBList<SkillObject>();
             effectedSkills21.Add(DefaultSkills.Bow);
             effectedSkills21.Add(DefaultSkills.Riding);
             CharacterAttribute control4 = DefaultCharacterAttributes.Control;
@@ -568,7 +568,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             TextObject descriptionText21 = new TextObject("{=URgZ4ai4}Your family were middle-ranking members of one of the Khuzait clans. He had some  herds of his own, but was not rich. When the Khuzait horde was summoned to battle, he fought with the horse archers, shooting and wheeling and wearing down the enemy before the lancers delivered the final punch.");
             creationCategory6.AddCategoryOption(text21, effectedSkills21, control4, focusToAdd21, skillLevelToAdd21, attributeLevelToAdd21, (CharacterCreationOnCondition)null, onSelect21, onApply21, descriptionText21);
             TextObject text22 = new TextObject("{=gQ2tAvCz}Farmers");
-            List<SkillObject> effectedSkills22 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills22 = new MBList<SkillObject>();
             effectedSkills22.Add(DefaultSkills.Polearm);
             effectedSkills22.Add(DefaultSkills.Throwing);
             CharacterAttribute vigor4 = DefaultCharacterAttributes.Vigor;
@@ -580,7 +580,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             TextObject descriptionText22 = new TextObject("{=5QSGoRFj}Your family tilled one of the small patches of arable land in the steppes for generations. When the Khuzaits came, they ceased paying taxes to the emperor and providing conscripts for his army, and served the khan instead.");
             creationCategory6.AddCategoryOption(text22, effectedSkills22, vigor4, focusToAdd22, skillLevelToAdd22, attributeLevelToAdd22, (CharacterCreationOnCondition)null, onSelect22, onApply22, descriptionText22);
             TextObject text23 = new TextObject("{=vfhVveLW}Shamans");
-            List<SkillObject> effectedSkills23 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills23 = new MBList<SkillObject>();
             effectedSkills23.Add(DefaultSkills.Medicine);
             effectedSkills23.Add(DefaultSkills.Charm);
             CharacterAttribute intelligence3 = DefaultCharacterAttributes.Intelligence;
@@ -592,7 +592,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             TextObject descriptionText23 = new TextObject("{=WOKNhaG2}Your family were guardians of the sacred traditions of the Khuzaits, channelling the spirits of the wilderness and of the ancestors. They tended the sick and dispensed wisdom, resolving disputes and providing practical advice.");
             creationCategory6.AddCategoryOption(text23, effectedSkills23, intelligence3, focusToAdd23, skillLevelToAdd23, attributeLevelToAdd23, (CharacterCreationOnCondition)null, onSelect23, onApply23, descriptionText23);
             TextObject text24 = new TextObject("{=Xqba1Obq}Nomads");
-            List<SkillObject> effectedSkills24 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills24 = new MBList<SkillObject>();
             effectedSkills24.Add(DefaultSkills.Scouting);
             effectedSkills24.Add(DefaultSkills.Riding);
             CharacterAttribute cunning4 = DefaultCharacterAttributes.Cunning;
@@ -612,7 +612,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
             CharacterCreationCategory creationCategory = menu.AddMenuCategory();
             TextObject text1 = new TextObject("{=kmM68Qx4}your leadership skills.");
-            List<SkillObject> effectedSkills1 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills1 = new MBList<SkillObject>();
             effectedSkills1.Add(DefaultSkills.Leadership);
             effectedSkills1.Add(DefaultSkills.Tactics);
             CharacterAttribute cunning = DefaultCharacterAttributes.Cunning;
@@ -626,7 +626,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text2 = new TextObject("{=5HXS8HEY}your brawn.");
-            List<SkillObject> effectedSkills2 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills2 = new MBList<SkillObject>();
             effectedSkills2.Add(DefaultSkills.TwoHanded);
             effectedSkills2.Add(DefaultSkills.Throwing);
             CharacterAttribute vigor = DefaultCharacterAttributes.Vigor;
@@ -640,7 +640,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text3 = new TextObject("{=QrYjPUEf}your attention to detail.");
-            List<SkillObject> effectedSkills3 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills3 = new MBList<SkillObject>();
             effectedSkills3.Add(DefaultSkills.Athletics);
             effectedSkills3.Add(DefaultSkills.Bow);
             CharacterAttribute control = DefaultCharacterAttributes.Control;
@@ -654,7 +654,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text4 = new TextObject("{=Y3UcaX74}your aptitude for numbers.");
-            List<SkillObject> effectedSkills4 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills4 = new MBList<SkillObject>();
             effectedSkills4.Add(DefaultSkills.Engineering);
             effectedSkills4.Add(DefaultSkills.Trade);
             CharacterAttribute intelligence = DefaultCharacterAttributes.Intelligence;
@@ -668,7 +668,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text5 = new TextObject("{=GEYzLuwb}your way with people.");
-            List<SkillObject> effectedSkills5 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills5 = new MBList<SkillObject>();
             effectedSkills5.Add(DefaultSkills.Charm);
             effectedSkills5.Add(DefaultSkills.Leadership);
             CharacterAttribute social = DefaultCharacterAttributes.Social;
@@ -682,7 +682,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text6 = new TextObject("{=MEgLE2kj}your skill with horses.");
-            List<SkillObject> effectedSkills6 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills6 = new MBList<SkillObject>();
             effectedSkills6.Add(DefaultSkills.Riding);
             effectedSkills6.Add(DefaultSkills.Medicine);
             CharacterAttribute endurance = DefaultCharacterAttributes.Endurance;
@@ -703,7 +703,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationCategory creationCategory = menu.AddMenuCategory();
 
             TextObject text1 = new TextObject("{=RKVNvimC}herded the sheep.");
-            List<SkillObject> effectedSkills1 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills1 = new MBList<SkillObject>();
             effectedSkills1.Add(DefaultSkills.Athletics);
             effectedSkills1.Add(DefaultSkills.Throwing);
             CharacterAttribute control1 = DefaultCharacterAttributes.Control;
@@ -717,7 +717,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             creationCategory.AddCategoryOption(text1, effectedSkills1, control1, focusToAdd1, skillLevelToAdd1, attributeLevelToAdd1, optionCondition1, onSelect1, onApply1, descriptionText1);
 
             TextObject text2 = new TextObject("{=bTKiN0hr}worked in the village smithy.");
-            List<SkillObject> effectedSkills2 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills2 = new MBList<SkillObject>();
             effectedSkills2.Add(DefaultSkills.TwoHanded);
             effectedSkills2.Add(DefaultSkills.Crafting);
             CharacterAttribute vigor1 = DefaultCharacterAttributes.Vigor;
@@ -732,7 +732,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text3 = new TextObject("{=tI8ZLtoA}repaired projects.");
-            List<SkillObject> effectedSkills3 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills3 = new MBList<SkillObject>();
             effectedSkills3.Add(DefaultSkills.Crafting);
             effectedSkills3.Add(DefaultSkills.Engineering);
             CharacterAttribute intelligence1 = DefaultCharacterAttributes.Intelligence;
@@ -747,7 +747,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text4 = new TextObject("{=TRwgSLD2}gathered herbs in the wild.");
-            List<SkillObject> effectedSkills4 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills4 = new MBList<SkillObject>();
             effectedSkills4.Add(DefaultSkills.Medicine);
             effectedSkills4.Add(DefaultSkills.Scouting);
             CharacterAttribute endurance1 = DefaultCharacterAttributes.Endurance;
@@ -762,7 +762,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text5 = new TextObject("{=T7m7ReTq}hunted small game.");
-            List<SkillObject> effectedSkills5 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills5 = new MBList<SkillObject>();
             effectedSkills5.Add(DefaultSkills.Bow);
             effectedSkills5.Add(DefaultSkills.Tactics);
             CharacterAttribute control2 = DefaultCharacterAttributes.Control;
@@ -777,7 +777,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text6 = new TextObject("{=qAbMagWq}sold product at the market.");
-            List<SkillObject> effectedSkills6 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills6 = new MBList<SkillObject>();
             effectedSkills6.Add(DefaultSkills.Trade);
             effectedSkills6.Add(DefaultSkills.Charm);
             CharacterAttribute social1 = DefaultCharacterAttributes.Social;
@@ -792,7 +792,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text7 = new TextObject("{=nOfSqRnI}at the town watch's training ground.");
-            List<SkillObject> effectedSkills7 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills7 = new MBList<SkillObject>();
             effectedSkills7.Add(DefaultSkills.Crossbow);
             effectedSkills7.Add(DefaultSkills.Tactics);
             CharacterAttribute control3 = DefaultCharacterAttributes.Control;
@@ -807,7 +807,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text8 = new TextObject("{=8a6dnLd2}with the alley gangs.");
-            List<SkillObject> effectedSkills8 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills8 = new MBList<SkillObject>();
             effectedSkills8.Add(DefaultSkills.Roguery);
             effectedSkills8.Add(DefaultSkills.OneHanded);
             CharacterAttribute cunning = DefaultCharacterAttributes.Cunning;
@@ -822,7 +822,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text9 = new TextObject("{=7Hv984Sf}at docks and building sites.");
-            List<SkillObject> effectedSkills9 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills9 = new MBList<SkillObject>();
             effectedSkills9.Add(DefaultSkills.Athletics);
             effectedSkills9.Add(DefaultSkills.Crafting);
             CharacterAttribute vigor2 = DefaultCharacterAttributes.Vigor;
@@ -837,7 +837,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text10 = new TextObject("{=kbcwb5TH}in the markets and caravanserais.");
-            List<SkillObject> effectedSkills10 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills10 = new MBList<SkillObject>();
             effectedSkills10.Add(DefaultSkills.Trade);
             effectedSkills10.Add(DefaultSkills.Charm);
             CharacterAttribute social2 = DefaultCharacterAttributes.Social;
@@ -852,7 +852,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text11 = new TextObject("{=kbcwb5TH}in the markets and caravanserais.");
-            List<SkillObject> effectedSkills11 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills11 = new MBList<SkillObject>();
             effectedSkills11.Add(DefaultSkills.Trade);
             effectedSkills11.Add(DefaultSkills.Charm);
             CharacterAttribute social3 = DefaultCharacterAttributes.Social;
@@ -867,7 +867,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text12 = new TextObject("{=mfRbx5KE}reading and studying.");
-            List<SkillObject> effectedSkills12 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills12 = new MBList<SkillObject>();
             effectedSkills12.Add(DefaultSkills.Engineering);
             effectedSkills12.Add(DefaultSkills.Leadership);
             CharacterAttribute intelligence2 = DefaultCharacterAttributes.Intelligence;
@@ -882,7 +882,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text13 = new TextObject("{=etG87fB7}with your tutor.");
-            List<SkillObject> effectedSkills13 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills13 = new MBList<SkillObject>();
             effectedSkills13.Add(DefaultSkills.Engineering);
             effectedSkills13.Add(DefaultSkills.Leadership);
             CharacterAttribute intelligence3 = DefaultCharacterAttributes.Intelligence;
@@ -897,7 +897,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text14 = new TextObject("{=FKpLEamz}caring for horses.");
-            List<SkillObject> effectedSkills14 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills14 = new MBList<SkillObject>();
             effectedSkills14.Add(DefaultSkills.Riding);
             effectedSkills14.Add(DefaultSkills.Steward);
             CharacterAttribute endurance2 = DefaultCharacterAttributes.Endurance;
@@ -912,7 +912,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text15 = new TextObject("{=vH7GtuuK}working at the stables.");
-            List<SkillObject> effectedSkills15 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills15 = new MBList<SkillObject>();
             effectedSkills15.Add(DefaultSkills.Riding);
             effectedSkills15.Add(DefaultSkills.Steward);
             CharacterAttribute endurance3 = DefaultCharacterAttributes.Endurance;
@@ -934,7 +934,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationCategory creationCategory = menu.AddMenuCategory();
 
             TextObject text1 = new TextObject("{=CITG915d}joined a commander's staff.");
-            List<SkillObject> effectedSkills1 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills1 = new MBList<SkillObject>();
             effectedSkills1.Add(DefaultSkills.Steward);
             effectedSkills1.Add(DefaultSkills.Tactics);
             CharacterAttribute cunning1 = DefaultCharacterAttributes.Cunning;
@@ -949,7 +949,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text2 = new TextObject("{=bhE2i6OU}served as a baron's groom.");
-            List<SkillObject> effectedSkills2 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills2 = new MBList<SkillObject>();
             effectedSkills2.Add(DefaultSkills.Steward);
             effectedSkills2.Add(DefaultSkills.Tactics);
             CharacterAttribute cunning2 = DefaultCharacterAttributes.Cunning;
@@ -964,7 +964,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text3 = new TextObject("{=F2bgujPo}were a chieftain's servant.");
-            List<SkillObject> effectedSkills3 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills3 = new MBList<SkillObject>();
             effectedSkills3.Add(DefaultSkills.Steward);
             effectedSkills3.Add(DefaultSkills.Tactics);
             CharacterAttribute cunning3 = DefaultCharacterAttributes.Cunning;
@@ -979,7 +979,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text4 = new TextObject("{=h2KnarLL}trained with the cavalry.");
-            List<SkillObject> effectedSkills4 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills4 = new MBList<SkillObject>();
             effectedSkills4.Add(DefaultSkills.Riding);
             effectedSkills4.Add(DefaultSkills.Polearm);
             CharacterAttribute endurance1 = DefaultCharacterAttributes.Endurance;
@@ -994,7 +994,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text5 = new TextObject("{=zsC2t5Hb}trained with the hearth guard.");
-            List<SkillObject> effectedSkills5 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills5 = new MBList<SkillObject>();
             effectedSkills5.Add(DefaultSkills.Riding);
             effectedSkills5.Add(DefaultSkills.Polearm);
             CharacterAttribute endurance2 = DefaultCharacterAttributes.Endurance;
@@ -1009,7 +1009,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text6 = new TextObject("{=aTncHUfL}stood guard with the garrisons.");
-            List<SkillObject> effectedSkills6 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills6 = new MBList<SkillObject>();
             effectedSkills6.Add(DefaultSkills.Crossbow);
             effectedSkills6.Add(DefaultSkills.Engineering);
             CharacterAttribute intelligence1 = DefaultCharacterAttributes.Intelligence;
@@ -1024,7 +1024,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text7 = new TextObject("{=aTncHUfL}stood guard with the garrisons.");
-            List<SkillObject> effectedSkills7 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills7 = new MBList<SkillObject>();
             effectedSkills7.Add(DefaultSkills.Bow);
             effectedSkills7.Add(DefaultSkills.Engineering);
             CharacterAttribute intelligence2 = DefaultCharacterAttributes.Intelligence;
@@ -1039,7 +1039,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text8 = new TextObject("{=VlXOgIX6}rode with the scouts.");
-            List<SkillObject> effectedSkills8 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills8 = new MBList<SkillObject>();
             effectedSkills8.Add(DefaultSkills.Riding);
             effectedSkills8.Add(DefaultSkills.Bow);
             CharacterAttribute endurance3 = DefaultCharacterAttributes.Endurance;
@@ -1054,7 +1054,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text9 = new TextObject("{=VlXOgIX6}rode with the scouts.");
-            List<SkillObject> effectedSkills9 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills9 = new MBList<SkillObject>();
             effectedSkills9.Add(DefaultSkills.Riding);
             effectedSkills9.Add(DefaultSkills.Bow);
             CharacterAttribute endurance4 = DefaultCharacterAttributes.Endurance;
@@ -1069,7 +1069,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text10 = new TextObject("{=a8arFSra}trained with the infantry.");
-            List<SkillObject> effectedSkills10 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills10 = new MBList<SkillObject>();
             effectedSkills10.Add(DefaultSkills.Polearm);
             effectedSkills10.Add(DefaultSkills.OneHanded);
             CharacterAttribute vigor = DefaultCharacterAttributes.Vigor;
@@ -1083,7 +1083,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text11 = new TextObject("{=oMbOIPc9}joined the skirmishers.");
-            List<SkillObject> effectedSkills11 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills11 = new MBList<SkillObject>();
             effectedSkills11.Add(DefaultSkills.Throwing);
             effectedSkills11.Add(DefaultSkills.OneHanded);
             CharacterAttribute control1 = DefaultCharacterAttributes.Control;
@@ -1098,7 +1098,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text12 = new TextObject("{=cDWbwBwI}joined the kern.");
-            List<SkillObject> effectedSkills12 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills12 = new MBList<SkillObject>();
             effectedSkills12.Add(DefaultSkills.Throwing);
             effectedSkills12.Add(DefaultSkills.OneHanded);
             CharacterAttribute control2 = DefaultCharacterAttributes.Control;
@@ -1113,7 +1113,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text13 = new TextObject("{=GFUggps8}marched with the camp followers.");
-            List<SkillObject> effectedSkills13 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills13 = new MBList<SkillObject>();
             effectedSkills13.Add(DefaultSkills.Roguery);
             effectedSkills13.Add(DefaultSkills.Throwing);
             CharacterAttribute cunning4 = DefaultCharacterAttributes.Cunning;
@@ -1139,7 +1139,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text1 = new TextObject("{=8bwpVpgy}you defeated an enemy in battle.");
-            List<SkillObject> effectedSkills1 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills1 = new MBList<SkillObject>();
             effectedSkills1.Add(DefaultSkills.OneHanded);
             effectedSkills1.Add(DefaultSkills.TwoHanded);
             CharacterAttribute vigor = DefaultCharacterAttributes.Vigor;
@@ -1149,14 +1149,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect1 = new CharacterCreationOnSelect(this.AccomplishmentDefeatedEnemyOnConsequence);
             CharacterCreationApplyFinalEffects onApply1 = new CharacterCreationApplyFinalEffects(this.AccomplishmentDefeatedEnemyOnApply);
             TextObject descriptionText1 = new TextObject("{=1IEroJKs}Not everyone who musters for the levy marches to war, and not everyone who goes on campaign sees action. You did both, and you also took down an enemy warrior in direct one-to-one combat, in the full view of your comrades.");
-            creationCategory.AddCategoryOption(text1, effectedSkills1, vigor, focusToAdd1, skillLevelToAdd1, attributeLevelToAdd1, (CharacterCreationOnCondition)null, onSelect1, onApply1, descriptionText1, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text1, effectedSkills1, vigor, focusToAdd1, skillLevelToAdd1, attributeLevelToAdd1, (CharacterCreationOnCondition)null, onSelect1, onApply1, descriptionText1, new MBList<TraitObject>()
                   {
                     DefaultTraits.Valor
                   }, 1, 20);
 
 
             TextObject text2 = new TextObject("{=mP3uFbcq}you led a successful manhunt.");
-            List<SkillObject> effectedSkills2 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills2 = new MBList<SkillObject>();
             effectedSkills2.Add(DefaultSkills.Tactics);
             effectedSkills2.Add(DefaultSkills.Leadership);
             CharacterAttribute cunning1 = DefaultCharacterAttributes.Cunning;
@@ -1167,14 +1167,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect2 = new CharacterCreationOnSelect(this.AccomplishmentExpeditionOnConsequence);
             CharacterCreationApplyFinalEffects onApply2 = new CharacterCreationApplyFinalEffects(this.AccomplishmentExpeditionOnApply);
             TextObject descriptionText2 = new TextObject("{=4f5xwzX0}When your community needed to organize a posse to pursue horse thieves, you were the obvious choice. You hunted down the raiders, surrounded them and forced their surrender, and took back your stolen property.");
-            creationCategory.AddCategoryOption(text2, effectedSkills2, cunning1, focusToAdd2, skillLevelToAdd2, attributeLevelToAdd2, optionCondition1, onSelect2, onApply2, descriptionText2, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text2, effectedSkills2, cunning1, focusToAdd2, skillLevelToAdd2, attributeLevelToAdd2, optionCondition1, onSelect2, onApply2, descriptionText2, new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   }, 1, 10);
 
 
             TextObject text3 = new TextObject("{=wfbtS71d}you led a caravan.");
-            List<SkillObject> effectedSkills3 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills3 = new MBList<SkillObject>();
             effectedSkills3.Add(DefaultSkills.Tactics);
             effectedSkills3.Add(DefaultSkills.Leadership);
             CharacterAttribute cunning2 = DefaultCharacterAttributes.Cunning;
@@ -1185,14 +1185,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect3 = new CharacterCreationOnSelect(this.AccomplishmentMerchantOnConsequence);
             CharacterCreationApplyFinalEffects onApply3 = new CharacterCreationApplyFinalEffects(this.AccomplishmentExpeditionOnApply);
             TextObject descriptionText3 = new TextObject("{=joRHKCkm}Your family needed someone trustworthy to take a caravan to a neighboring town. You organized supplies, ensured a constant watch to keep away bandits, and brought it safely to its destination.");
-            creationCategory.AddCategoryOption(text3, effectedSkills3, cunning2, focusToAdd3, skillLevelToAdd3, attributeLevelToAdd3, optionCondition2, onSelect3, onApply3, descriptionText3, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text3, effectedSkills3, cunning2, focusToAdd3, skillLevelToAdd3, attributeLevelToAdd3, optionCondition2, onSelect3, onApply3, descriptionText3, new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   }, 1, 10);
 
 
             TextObject text4 = new TextObject("{=x1HTX5hq}you saved your village from a flood.");
-            List<SkillObject> effectedSkills4 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills4 = new MBList<SkillObject>();
             effectedSkills4.Add(DefaultSkills.Tactics);
             effectedSkills4.Add(DefaultSkills.Leadership);
             CharacterAttribute cunning3 = DefaultCharacterAttributes.Cunning;
@@ -1203,14 +1203,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect4 = new CharacterCreationOnSelect(this.AccomplishmentSavedVillageOnConsequence);
             CharacterCreationApplyFinalEffects onApply4 = new CharacterCreationApplyFinalEffects(this.AccomplishmentExpeditionOnApply);
             TextObject descriptionText4 = new TextObject("{=bWlmGDf3}When a sudden storm caused the local stream to rise suddenly, your neighbors needed quick-thinking leadership. You provided it, directing them to build levees to save their homes.");
-            creationCategory.AddCategoryOption(text4, effectedSkills4, cunning3, focusToAdd4, skillLevelToAdd4, attributeLevelToAdd4, optionCondition3, onSelect4, onApply4, descriptionText4, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text4, effectedSkills4, cunning3, focusToAdd4, skillLevelToAdd4, attributeLevelToAdd4, optionCondition3, onSelect4, onApply4, descriptionText4, new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   }, 1, 10);
 
 
             TextObject text5 = new TextObject("{=s8PNllPN}you saved your city quarter from a fire.");
-            List<SkillObject> effectedSkills5 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills5 = new MBList<SkillObject>();
             effectedSkills5.Add(DefaultSkills.Tactics);
             effectedSkills5.Add(DefaultSkills.Leadership);
             CharacterAttribute cunning4 = DefaultCharacterAttributes.Cunning;
@@ -1221,14 +1221,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect5 = new CharacterCreationOnSelect(this.AccomplishmentSavedStreetOnConsequence);
             CharacterCreationApplyFinalEffects onApply5 = new CharacterCreationApplyFinalEffects(this.AccomplishmentExpeditionOnApply);
             TextObject descriptionText5 = new TextObject("{=ZAGR6PYc}When a sudden blaze broke out in a back alley, your neighbors needed quick-thinking leadership and you provided it. You organized a bucket line to the nearest well, putting the fire out before any homes were lost.");
-            creationCategory.AddCategoryOption(text5, effectedSkills5, cunning4, focusToAdd5, skillLevelToAdd5, attributeLevelToAdd5, optionCondition4, onSelect5, onApply5, descriptionText5, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text5, effectedSkills5, cunning4, focusToAdd5, skillLevelToAdd5, attributeLevelToAdd5, optionCondition4, onSelect5, onApply5, descriptionText5, new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   }, 1, 10);
 
 
             TextObject text6 = new TextObject("{=xORjDTal}you invested some money in a workshop.");
-            List<SkillObject> effectedSkills6 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills6 = new MBList<SkillObject>();
             effectedSkills6.Add(DefaultSkills.Trade);
             effectedSkills6.Add(DefaultSkills.Crafting);
             CharacterAttribute intelligence1 = DefaultCharacterAttributes.Intelligence;
@@ -1239,14 +1239,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect6 = new CharacterCreationOnSelect(this.AccomplishmentWorkshopOnConsequence);
             CharacterCreationApplyFinalEffects onApply6 = new CharacterCreationApplyFinalEffects(this.AccomplishmentWorkshopOnApply);
             TextObject descriptionText6 = new TextObject("{=PyVqDLBu}Your parents didn't give you much money, but they did leave just enough for you to secure a loan against a larger amount to build a small workshop. You paid back what you borrowed, and sold your enterprise for a profit.");
-            creationCategory.AddCategoryOption(text6, effectedSkills6, intelligence1, focusToAdd6, skillLevelToAdd6, attributeLevelToAdd6, optionCondition5, onSelect6, onApply6, descriptionText6, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text6, effectedSkills6, intelligence1, focusToAdd6, skillLevelToAdd6, attributeLevelToAdd6, optionCondition5, onSelect6, onApply6, descriptionText6, new MBList<TraitObject>()
                       {
                         DefaultTraits.Calculating
                       }, 1, 10);
 
 
             TextObject text7 = new TextObject("{=xKXcqRJI}you invested some money in land.");
-            List<SkillObject> effectedSkills7 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills7 = new MBList<SkillObject>();
             effectedSkills7.Add(DefaultSkills.Trade);
             effectedSkills7.Add(DefaultSkills.Crafting);
             CharacterAttribute intelligence2 = DefaultCharacterAttributes.Intelligence;
@@ -1257,14 +1257,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect7 = new CharacterCreationOnSelect(this.AccomplishmentWorkshopOnConsequence);
             CharacterCreationApplyFinalEffects onApply7 = new CharacterCreationApplyFinalEffects(this.AccomplishmentWorkshopOnApply);
             TextObject descriptionText7 = new TextObject("{=cbF9jdQo}Your parents didn't give you much money, but they did leave just enough for you to purchase a plot of unused land at the edge of the village. You cleared away rocks and dug an irrigation ditch, raised a few seasons of crops, than sold it for a considerable profit.");
-            creationCategory.AddCategoryOption(text7, effectedSkills7, intelligence2, focusToAdd7, skillLevelToAdd7, attributeLevelToAdd7, optionCondition6, onSelect7, onApply7, descriptionText7, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text7, effectedSkills7, intelligence2, focusToAdd7, skillLevelToAdd7, attributeLevelToAdd7, optionCondition6, onSelect7, onApply7, descriptionText7, new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   }, 1, 10);
 
 
             TextObject text8 = new TextObject("{=TbNRtUjb}you hunted a dangerous animal.");
-            List<SkillObject> effectedSkills8 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills8 = new MBList<SkillObject>();
             effectedSkills8.Add(DefaultSkills.Polearm);
             effectedSkills8.Add(DefaultSkills.Crossbow);
             CharacterAttribute control1 = DefaultCharacterAttributes.Control;
@@ -1275,14 +1275,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect8 = new CharacterCreationOnSelect(this.AccomplishmentSiegeHunterOnConsequence);
             CharacterCreationApplyFinalEffects onApply8 = new CharacterCreationApplyFinalEffects(this.AccomplishmentSiegeHunterOnApply);
             TextObject descriptionText8 = new TextObject("{=I3PcdaaL}Wolves, bears are a constant menace to the flocks of northern Calradia, while hyenas and leopards trouble the south. You went with a group of your fellow villagers and fired the missile that brought down the beast.");
-            creationCategory.AddCategoryOption(text8, effectedSkills8, control1, focusToAdd8, skillLevelToAdd8, attributeLevelToAdd8, optionCondition7, onSelect8, onApply8, descriptionText8, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text8, effectedSkills8, control1, focusToAdd8, skillLevelToAdd8, attributeLevelToAdd8, optionCondition7, onSelect8, onApply8, descriptionText8, new MBList<TraitObject>()
                   {
                     DefaultTraits.Valor
                   }, 1, 5);
 
 
             TextObject text9 = new TextObject("{=WbHfGCbd}you survived a siege.");
-            List<SkillObject> effectedSkills9 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills9 = new MBList<SkillObject>();
             effectedSkills9.Add(DefaultSkills.Bow);
             effectedSkills9.Add(DefaultSkills.Crossbow);
             CharacterAttribute control2 = DefaultCharacterAttributes.Control;
@@ -1297,7 +1297,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text10 = new TextObject("{=kNXet6Um}you had a famous escapade in town.");
-            List<SkillObject> effectedSkills10 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills10 = new MBList<SkillObject>();
             effectedSkills10.Add(DefaultSkills.Athletics);
             effectedSkills10.Add(DefaultSkills.Roguery);
             CharacterAttribute endurance1 = DefaultCharacterAttributes.Endurance;
@@ -1308,14 +1308,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect10 = new CharacterCreationOnSelect(this.AccomplishmentEscapadeOnConsequence);
             CharacterCreationApplyFinalEffects onApply10 = new CharacterCreationApplyFinalEffects(this.AccomplishmentEscapadeOnApply);
             TextObject descriptionText10 = new TextObject("{=DjeAJtix}Maybe it was a love affair, or maybe you cheated at dice, or maybe you just chose your words poorly when drinking with a dangerous crowd. Anyway, on one of your trips into town you got into the kind of trouble from which only a quick tongue or quick feet get you out alive.");
-            creationCategory.AddCategoryOption(text10, effectedSkills10, endurance1, focusToAdd10, skillLevelToAdd10, attributeLevelToAdd10, optionCondition9, onSelect10, onApply10, descriptionText10, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text10, effectedSkills10, endurance1, focusToAdd10, skillLevelToAdd10, attributeLevelToAdd10, optionCondition9, onSelect10, onApply10, descriptionText10, new MBList<TraitObject>()
                   {
                     DefaultTraits.Valor
                   }, 1, 5);
 
 
             TextObject text11 = new TextObject("{=qlOuiKXj}you had a famous escapade.");
-            List<SkillObject> effectedSkills11 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills11 = new MBList<SkillObject>();
             effectedSkills11.Add(DefaultSkills.Athletics);
             effectedSkills11.Add(DefaultSkills.Roguery);
             CharacterAttribute endurance2 = DefaultCharacterAttributes.Endurance;
@@ -1326,14 +1326,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect11 = new CharacterCreationOnSelect(this.AccomplishmentEscapadeOnConsequence);
             CharacterCreationApplyFinalEffects onApply11 = new CharacterCreationApplyFinalEffects(this.AccomplishmentEscapadeOnApply);
             TextObject descriptionText11 = new TextObject("{=lD5Ob3R4}Maybe it was a love affair, or maybe you cheated at dice, or maybe you just chose your words poorly when drinking with a dangerous crowd. Anyway, you got into the kind of trouble from which only a quick tongue or quick feet get you out alive.");
-            creationCategory.AddCategoryOption(text11, effectedSkills11, endurance2, focusToAdd11, skillLevelToAdd11, attributeLevelToAdd11, optionCondition10, onSelect11, onApply11, descriptionText11, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text11, effectedSkills11, endurance2, focusToAdd11, skillLevelToAdd11, attributeLevelToAdd11, optionCondition10, onSelect11, onApply11, descriptionText11, new MBList<TraitObject>()
                   {
                     DefaultTraits.Valor
                   }, 1, 5);
 
 
             TextObject text12 = new TextObject("{=Yqm0Dics}you treated people well.");
-            List<SkillObject> effectedSkills12 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills12 = new MBList<SkillObject>();
             effectedSkills12.Add(DefaultSkills.Charm);
             effectedSkills12.Add(DefaultSkills.Steward);
             CharacterAttribute social = DefaultCharacterAttributes.Social;
@@ -1343,7 +1343,7 @@ namespace CharacterCreationMenuFramework.NewFolder
             CharacterCreationOnSelect onSelect12 = new CharacterCreationOnSelect(this.AccomplishmentTreaterOnConsequence);
             CharacterCreationApplyFinalEffects onApply12 = new CharacterCreationApplyFinalEffects(this.AccomplishmentTreaterOnApply);
             TextObject descriptionText12 = new TextObject("{=dDmcqTzb}Yours wasn't the kind of reputation that local legends are made of, but it was the kind that wins you respect among those around you. You were consistently fair and honest in your business dealings and helpful to those in trouble. In doing so, you got a sense of what made people tick.");
-            creationCategory.AddCategoryOption(text12, effectedSkills12, social, focusToAdd12, skillLevelToAdd12, attributeLevelToAdd12, (CharacterCreationOnCondition)null, onSelect12, onApply12, descriptionText12, new List<TraitObject>()
+            creationCategory.AddCategoryOption(text12, effectedSkills12, social, focusToAdd12, skillLevelToAdd12, attributeLevelToAdd12, (CharacterCreationOnCondition)null, onSelect12, onApply12, descriptionText12, new MBList<TraitObject>()
                   {
                     DefaultTraits.Mercy,
                     DefaultTraits.Generosity,
@@ -1362,7 +1362,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text1 = new TextObject("{=6vCHovVH}you subdued a raider.");
-            List<SkillObject> effectedSkills1 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills1 = new MBList<SkillObject>();
             effectedSkills1.Add(DefaultSkills.OneHanded);
             effectedSkills1.Add(DefaultSkills.Athletics);
             CharacterAttribute vigor = DefaultCharacterAttributes.Vigor;
@@ -1376,7 +1376,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text2 = new TextObject("{=2XhW49TX}you drove them off with arrows.");
-            List<SkillObject> effectedSkills2 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills2 = new MBList<SkillObject>();
             effectedSkills2.Add(DefaultSkills.Bow);
             effectedSkills2.Add(DefaultSkills.Tactics);
             CharacterAttribute control = DefaultCharacterAttributes.Control;
@@ -1390,7 +1390,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text3 = new TextObject("{=gOI8lKcl}you rode off on a fast horse.");
-            List<SkillObject> effectedSkills3 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills3 = new MBList<SkillObject>();
             effectedSkills3.Add(DefaultSkills.Riding);
             effectedSkills3.Add(DefaultSkills.Scouting);
             CharacterAttribute endurance = DefaultCharacterAttributes.Endurance;
@@ -1404,7 +1404,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text4 = new TextObject("{=EdUppdLZ}you tricked the raiders.");
-            List<SkillObject> effectedSkills4 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills4 = new MBList<SkillObject>();
             effectedSkills4.Add(DefaultSkills.Roguery);
             effectedSkills4.Add(DefaultSkills.Tactics);
             CharacterAttribute cunning = DefaultCharacterAttributes.Cunning;
@@ -1418,7 +1418,7 @@ namespace CharacterCreationMenuFramework.NewFolder
 
 
             TextObject text5 = new TextObject("{=qhAhPWdp}you organized the travelers to break out.");
-            List<SkillObject> effectedSkills5 = new List<SkillObject>();
+            MBList<SkillObject> effectedSkills5 = new MBList<SkillObject>();
             effectedSkills5.Add(DefaultSkills.Leadership);
             effectedSkills5.Add(DefaultSkills.Charm);
             CharacterAttribute social = DefaultCharacterAttributes.Social;
@@ -1623,14 +1623,14 @@ namespace CharacterCreationMenuFramework.NewFolder
             StringHelpers.SetCharacterProperties("PLAYER", CharacterObject.PlayerCharacter);
             TextObject text1 = GameTexts.FindText("str_player_little_brother_name", Hero.MainHero.Culture.StringId);
             StoryModeHeroes.LittleBrother.SetName(text1, text1);
-            StoryModeHeroes.LittleBrother.HasMet = true;
+            StoryModeHeroes.LittleBrother.SetHasMet();
             TextObject parent1 = new TextObject("{=h68qCoz3}{PLAYER_LITTLE_BROTHER.NAME} is the little brother of {PLAYER.LINK}. He has been abducted by bandits, who intend to sell him into slavery.");
             StringHelpers.SetCharacterProperties("PLAYER_LITTLE_BROTHER", StoryModeHeroes.LittleBrother.CharacterObject, parent1);
             StringHelpers.SetCharacterProperties("PLAYER", CharacterObject.PlayerCharacter, parent1);
             StoryModeHeroes.LittleBrother.EncyclopediaText = parent1;
             TextObject text2 = GameTexts.FindText("str_player_little_sister_name", Hero.MainHero.Culture.StringId);
             StoryModeHeroes.LittleSister.SetName(text2, text2);
-            StoryModeHeroes.LittleSister.HasMet = true;
+            StoryModeHeroes.LittleSister.SetHasMet();
             TextObject parent2 = new TextObject("{=epB0x816}{PLAYER_LITTLE_SISTER.NAME} is the little sister of {PLAYER.LINK}. She has been abducted by bandits, who intend to sell her into slavery.");
             StringHelpers.SetCharacterProperties("PLAYER_LITTLE_SISTER", StoryModeHeroes.LittleSister.CharacterObject, parent2);
             StringHelpers.SetCharacterProperties("PLAYER", CharacterObject.PlayerCharacter, parent2);
@@ -1658,9 +1658,9 @@ namespace CharacterCreationMenuFramework.NewFolder
             character1.HeroObject.UpdateHomeSettlement();
             character2.HeroObject.UpdateHomeSettlement();
             characterObject.HeroObject.UpdateHomeSettlement();
-            character1.HeroObject.HasMet = true;
-            character2.HeroObject.HasMet = true;
-            characterObject.HeroObject.HasMet = true;
+            character1.HeroObject.SetHasMet(); ;
+            character2.HeroObject.SetHasMet(); ;
+            characterObject.HeroObject.SetHasMet(); ;
         }
 
         protected void SandoxFinalizeParents()
@@ -1690,8 +1690,8 @@ namespace CharacterCreationMenuFramework.NewFolder
             character1.HeroObject.EncyclopediaText = parent2;
             character1.HeroObject.UpdateHomeSettlement();
             character2.HeroObject.UpdateHomeSettlement();
-            character1.HeroObject.HasMet = true;
-            character2.HeroObject.HasMet = true;
+            character1.HeroObject.SetHasMet();
+            character2.HeroObject.SetHasMet();
         }
 
 

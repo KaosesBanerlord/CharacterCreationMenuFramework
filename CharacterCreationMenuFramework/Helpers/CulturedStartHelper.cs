@@ -195,7 +195,7 @@ namespace CharacterCreationMenuFramework.Helpers
                 Hero companion = HeroCreator.CreateSpecialHero(wanderer, randomSettlement, null, null, 33);
                 companion.HeroDeveloper.DeriveSkillsFromTraits(false, wanderer);
                 SetEquipment(companion, 4);
-                companion.HasMet = true;
+                companion.SetHasMet();
                 companion.Clan = randomSettlement.OwnerClan;
                 companion.ChangeState(Hero.CharacterStates.Active);
                 AddCompanionAction.Apply(Clan.PlayerClan, companion);
@@ -228,7 +228,7 @@ namespace CharacterCreationMenuFramework.Helpers
             GiveGoldAction.ApplyBetweenCharacters(null, exiledHero, 4000, true);
             exiledHero.BattleEquipment.FillFrom(exiledHeroEquipment);
             mainhero.BattleEquipment.FillFrom(mainHeroEquipment);
-            exiledHero.HasMet = true;
+            exiledHero.SetHasMet();
             exiledHero.Clan = randomSettlement.OwnerClan;
             exiledHero.ChangeState(Hero.CharacterStates.Active);
             AddCompanionAction.Apply(Clan.PlayerClan, exiledHero);

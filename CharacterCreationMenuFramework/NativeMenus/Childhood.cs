@@ -12,6 +12,7 @@ using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
 using static CharacterCreationMenuFramework.Enums;
+using TaleWorlds.Library;
 
 namespace CharacterCreationMenuFramework.NativeMenus
 {
@@ -19,7 +20,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
     {
         public string Id => "native_childhood";
 
-        public TextObject title => new TextObject("{=8Yiwt1z6}Early Childhood");
+        public TextObject title => new TextObject("{=8Yiwt1z6}Native Early Childhood");
 
         public TextObject description => new TextObject("{=character_creation_content_16}As a child you were noted for...");
 
@@ -58,9 +59,9 @@ namespace CharacterCreationMenuFramework.NativeMenus
             List<CMenuOption> empireOptinonsList = new List<CMenuOption>();
 
             CMenuOption menuleadership = new CMenuOption(new TextObject("{=kmM68Qx4}your leadership skills."), new TextObject("{=FfNwXtii}If the wolf pup gang of your early childhood had an alpha, it was definitely you. All the other kids followed your lead as you decided what to play and where to play, and led them in games and mischief."));
-            menuleadership.effectedSkills = new List<SkillObject>(){
+            menuleadership.effectedSkills = new MBList<SkillObject>(){
                                             DefaultSkills.Leadership,
-                                            DefaultSkills.Tactics}; //List<SkillObject>
+                                            DefaultSkills.Tactics}; //MBList<SkillObject>
             menuleadership.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuleadership.focusToAdd = characterCreationContent.FocusToAdd;
             menuleadership.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -71,11 +72,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuleadership.Id = "nc_leadershipskills";
 
             CMenuOption menuBrawn = new CMenuOption(new TextObject("{=5HXS8HEY}your brawn."), new TextObject("{=YKzuGc54}You were big, and other children looked to have you around in any scrap with children from a neighboring village. You pushed a plough and threw an axe like an adult."));
-            menuBrawn.effectedSkills = new List<SkillObject>()
+            menuBrawn.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.TwoHanded,
                     DefaultSkills.Throwing
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuBrawn.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuBrawn.focusToAdd = characterCreationContent.FocusToAdd;
             menuBrawn.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -86,11 +87,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuBrawn.Id = "nc_yourbrawn";
 
             CMenuOption menuAttention = new CMenuOption(new TextObject("{=QrYjPUEf}your attention to detail."), new TextObject("{=JUSHAPnu}You were quick on your feet and attentive to what was going on around you. Usually you could run away from trouble, though you could give a good account of yourself in a fight with other children if cornered."));
-            menuAttention.effectedSkills = new List<SkillObject>()
+            menuAttention.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Athletics,
                     DefaultSkills.Bow
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuAttention.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuAttention.focusToAdd = characterCreationContent.FocusToAdd;
             menuAttention.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -101,11 +102,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuAttention.Id = "nc_attentiontodetail";
 
             CMenuOption menuAptitude = new CMenuOption(new TextObject("{=Y3UcaX74}your aptitude for numbers."), new TextObject("{=DFidSjIf}Most children around you had only the most rudimentary education, but you lingered after class to study letters and mathematics. You were fascinated by the marketplace - weights and measures, tallies and accounts, the chatter about profits and losses."));
-            menuAptitude.effectedSkills = new List<SkillObject>()
+            menuAptitude.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Engineering,
                     DefaultSkills.Trade
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuAptitude.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuAptitude.focusToAdd = characterCreationContent.FocusToAdd;
             menuAptitude.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -116,11 +117,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuAptitude.Id = "nc_aptitudefornumbers";
 
             CMenuOption menuCharm = new CMenuOption(new TextObject("{=GEYzLuwb}your way with people."), new TextObject("{=w2TEQq26}You were always attentive to other people, good at guessing their motivations. You studied how individuals were swayed, and tried out what you learned from adults on your friends."));
-            menuCharm.effectedSkills = new List<SkillObject>()
+            menuCharm.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Charm,
                     DefaultSkills.Leadership
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuCharm.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuCharm.focusToAdd = characterCreationContent.FocusToAdd;
             menuCharm.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -131,11 +132,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuCharm.Id = "nc_waywithpeople";
 
             CMenuOption menuHorses = new CMenuOption(new TextObject("{=MEgLE2kj}your skill with horses."), new TextObject("{=ngazFofr}You were always drawn to animals, and spent as much time as possible hanging out in the village stables. You could calm horses, and were sometimes called upon to break in new colts. You learned the basics of veterinary arts, much of which is applicable to humans as well."));
-            menuHorses.effectedSkills = new List<SkillObject>()
+            menuHorses.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Medicine
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuHorses.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuHorses.focusToAdd = characterCreationContent.FocusToAdd;
             menuHorses.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;

@@ -9,13 +9,14 @@ using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
 using CharacterCreationMenuFramework.Objects;
+using TaleWorlds.Library;
 
 namespace CharacterCreationMenuFramework.NativeMenus
 {
     public class Background : ICustomMenu
     {
         public string Id => "native_background";
-        public TextObject title => new TextObject("{=peNBA0WW}Story Background");
+        public TextObject title => new TextObject("{=peNBA0WW}Native Story Background");
         /*        private TextObject _title = new TextObject("{=b4lDDcli}Kaoses Family");
                 public TextObject title { get => _title; set => _title = value }*/
 
@@ -52,11 +53,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
         public void BuildBackgroundOptions(CharacterCreation characterCreation, KaosesStoryModeCharacterCreationContent characterCreationContent)
         {
             CMenuOption menuSubdedRaider = new CMenuOption(new TextObject("{=6vCHovVH}you subdued a raider."), new TextObject("{=CvBoRaFv}You were able to grab a knife in the confusion of the attack. You stabbed a raider blocking your way."));
-            menuSubdedRaider.effectedSkills = new List<SkillObject>()
+            menuSubdedRaider.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.OneHanded,
                     DefaultSkills.Athletics
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuSubdedRaider.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuSubdedRaider.focusToAdd = characterCreationContent.FocusToAdd;
             menuSubdedRaider.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -67,11 +68,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuSubdedRaider.Id = "nb_subdedraider";
 
             CMenuOption menuDroveOffWithArrows = new CMenuOption(new TextObject("{=2XhW49TX}you drove them off with arrows."), new TextObject("{=ccf67J3J}You grabbed a bow and sent a few arrows the raiders' way. They took cover, giving you the opportunity to flee with your brother."));
-            menuDroveOffWithArrows.effectedSkills = new List<SkillObject>()
+            menuDroveOffWithArrows.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Bow,
                     DefaultSkills.Tactics
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuDroveOffWithArrows.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuDroveOffWithArrows.focusToAdd = characterCreationContent.FocusToAdd;
             menuDroveOffWithArrows.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -82,11 +83,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuDroveOffWithArrows.Id = "nb_drovethemoffwitharrows";
 
             CMenuOption menuRodeOffFastHorse = new CMenuOption(new TextObject("{=gOI8lKcl}you rode off on a fast horse."), new TextObject("{=cepWNzEA}Jumping on the two remaining horses in the inn's burning stable, you and your brother broke out of the encircling raiders and rode off."));
-            menuRodeOffFastHorse.effectedSkills = new List<SkillObject>()
+            menuRodeOffFastHorse.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Scouting
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuRodeOffFastHorse.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuRodeOffFastHorse.focusToAdd = characterCreationContent.FocusToAdd;
             menuRodeOffFastHorse.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -97,11 +98,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuRodeOffFastHorse.Id = "nb_rodeoffonfasthorse";
 
             CMenuOption menuTrickedRaiders = new CMenuOption(new TextObject("{=EdUppdLZ}you tricked the raiders."), new TextObject("{=ZqOvtLBM}In the confusion of the attack you shouted that someone had found treasure in the back room. You then made your way out of the undefended entrance with your brother."));
-            menuTrickedRaiders.effectedSkills = new List<SkillObject>()
+            menuTrickedRaiders.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Roguery,
                     DefaultSkills.Tactics
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuTrickedRaiders.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuTrickedRaiders.focusToAdd = characterCreationContent.FocusToAdd;
             menuTrickedRaiders.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -112,11 +113,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuTrickedRaiders.Id = "nb_trickedtheraiders";
 
             CMenuOption menuOrganisedTravellersBreakout = new CMenuOption(new TextObject("{=qhAhPWdp}you organized the travelers to break out."), new TextObject("{=Lmfi0cYk}You encouraged the few travellers in the inn to break out in a coordinated fashion. Raiders killed or captured most but you and your brother were able to escape."));
-            menuOrganisedTravellersBreakout.effectedSkills = new List<SkillObject>()
+            menuOrganisedTravellersBreakout.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Leadership,
                     DefaultSkills.Charm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuOrganisedTravellersBreakout.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuOrganisedTravellersBreakout.focusToAdd = characterCreationContent.FocusToAdd;
             menuOrganisedTravellersBreakout.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;

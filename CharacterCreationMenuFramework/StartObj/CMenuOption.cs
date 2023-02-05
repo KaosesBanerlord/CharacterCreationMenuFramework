@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.CampaignSystem.CharacterDevelopment;
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 using TaleWorlds.Localization;
 
 namespace CharacterCreationMenuFramework.StartObj
@@ -16,7 +17,7 @@ namespace CharacterCreationMenuFramework.StartObj
         public TextObject optionText = new TextObject("");
         public TextObject descriptionText = new TextObject("");
 
-        public List<SkillObject> effectedSkills = new List<SkillObject>();
+        public MBList<SkillObject> effectedSkills = new MBList<SkillObject>();
         public CharacterAttribute effectedAttribute = DefaultCharacterAttributes.Social;
         public int focusToAdd = 0;
         public int skillLevelToAdd = 0;
@@ -24,7 +25,7 @@ namespace CharacterCreationMenuFramework.StartObj
         public CharacterCreationOnCondition optionCondition = (CharacterCreationOnCondition)null;
         public CharacterCreationOnSelect onSelect = (CharacterCreationOnSelect)null;
         public CharacterCreationApplyFinalEffects onApply = (CharacterCreationApplyFinalEffects)null;
-        public List<TraitObject> effectedTraits = new List<TraitObject>();
+        public MBList<TraitObject> effectedTraits = new MBList<TraitObject>();
         public int traitLevelToAdd = 0;
         public int renownToAdd = 0;
         public int goldToAdd = 0;

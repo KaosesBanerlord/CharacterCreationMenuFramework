@@ -16,13 +16,14 @@ using TaleWorlds.Core;
 using TaleWorlds.Localization;
 using static CharacterCreationMenuFramework.Enums;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using TaleWorlds.Library;
 
 namespace CharacterCreationMenuFramework.NativeMenus
 {
     public class FamilyMenu : ICustomMenu
     {
         public string Id => "native_family";
-        public TextObject title => new TextObject("{=b4lDDcli}Family");
+        public TextObject title => new TextObject("{=b4lDDcli}Native Family");
         /*        private TextObject _title = new TextObject("{=b4lDDcli}Kaoses Family");
                 public TextObject title { get => _title; set => _title = value }*/
 
@@ -98,9 +99,9 @@ namespace CharacterCreationMenuFramework.NativeMenus
             #region Empire Options
             List<CMenuOption> empireOptinonsList = new List<CMenuOption>();
             CMenuOption menulandlordsRetainers = new CMenuOption(new TextObject("{=InN5ZZt3}A landlord's retainers"), new TextObject("{=ivKl4mV2}Your father was a trusted lieutenant of the local landowning aristocrat. He rode with the lord's cavalry, fighting as an armored lancer."));
-            menulandlordsRetainers.effectedSkills = new List<SkillObject>(){
+            menulandlordsRetainers.effectedSkills = new MBList<SkillObject>(){
                                             DefaultSkills.Riding,
-                                            DefaultSkills.Polearm}; //List<SkillObject>
+                                            DefaultSkills.Polearm}; //MBList<SkillObject>
             menulandlordsRetainers.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menulandlordsRetainers.focusToAdd = characterCreationContent.FocusToAdd;
             menulandlordsRetainers.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -111,11 +112,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menulandlordsRetainers.Id = "nf_landlordsRetainers";
 
             CMenuOption menuUrbanmerchants = new CMenuOption(new TextObject("{=651FhzdR}Urban merchants"), new TextObject("{=FQntPChs}Your family were merchants in one of the main cities of the Empire. They sometimes organized caravans to nearby towns, and discussed issues in the town council."));
-            menuUrbanmerchants.effectedSkills = new List<SkillObject>()
+            menuUrbanmerchants.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Trade,
                     DefaultSkills.Charm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuUrbanmerchants.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuUrbanmerchants.focusToAdd = characterCreationContent.FocusToAdd;
             menuUrbanmerchants.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -126,11 +127,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuUrbanmerchants.Id = "nf_urbanmerchants";
 
             CMenuOption menuFreeholders = new CMenuOption(new TextObject("{=sb4gg8Ak}Freeholders"), new TextObject("{=09z8Q08f}Your family were small farmers with just enough land to feed themselves and make a small profit. People like them were the pillars of the imperial rural economy, as well as the backbone of the levy."));
-            menuFreeholders.effectedSkills = new List<SkillObject>()
+            menuFreeholders.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Athletics,
                     DefaultSkills.Polearm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuFreeholders.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuFreeholders.focusToAdd = characterCreationContent.FocusToAdd;
             menuFreeholders.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -141,11 +142,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuFreeholders.Id = "nf_freeholders";
 
             CMenuOption menuUrbanArtisans = new CMenuOption(new TextObject("{=v48N6h1t}Urban artisans"), new TextObject("{=ZKynvffv}Your family owned their own workshop in a city, making goods from raw materials brought in from the countryside. Your father played an active if minor role in the town council, and also served in the militia."));
-            menuUrbanArtisans.effectedSkills = new List<SkillObject>()
+            menuUrbanArtisans.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Crafting,
                     DefaultSkills.Crossbow
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuUrbanArtisans.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuUrbanArtisans.focusToAdd = characterCreationContent.FocusToAdd;
             menuUrbanArtisans.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -156,11 +157,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuUrbanArtisans.Id = "nf_";
 
             CMenuOption menuForesters = new CMenuOption(new TextObject("{=7eWmU2mF}Foresters"), new TextObject("{=yRFSzSDZ}Your family lived in a village, but did not own their own land. Instead, your father supplemented paid jobs with long trips in the woods, hunting and trapping, always keeping a wary eye for the lord's game wardens."));
-            menuForesters.effectedSkills = new List<SkillObject>()
+            menuForesters.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Scouting,
                     DefaultSkills.Bow
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuForesters.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuForesters.focusToAdd = characterCreationContent.FocusToAdd;
             menuForesters.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -171,11 +172,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuForesters.Id = "nf_foresters";
 
             CMenuOption menuUrbanVagabonds = new CMenuOption(new TextObject("{=aEke8dSb}Urban vagabonds"), new TextObject("{=Jvf6K7TZ}Your family numbered among the many poor migrants living in the slums that grow up outside the walls of imperial cities, making whatever money they could from a variety of odd jobs. Sometimes they did service for one of the Empire's many criminal gangs, and you had an early look at the dark side of life."));
-            menuUrbanVagabonds.effectedSkills = new List<SkillObject>()
+            menuUrbanVagabonds.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Roguery,
                     DefaultSkills.Throwing
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuUrbanVagabonds.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuUrbanVagabonds.focusToAdd = characterCreationContent.FocusToAdd;
             menuUrbanVagabonds.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -203,11 +204,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             List<CMenuOption> vlandianOptinonsList = new List<CMenuOption>();
 
             CMenuOption menuVladianbaronsRetainers = new CMenuOption(new TextObject("{=2TptWc4m}A baron's retainers"), new TextObject("{=0Suu1Q9q}Your father was a bailiff for a local feudal magnate. He looked after his liege's estates, resolved disputes in the village, and helped train the village levy. He rode with the lord's cavalry, fighting as an armored knight."));
-            menuVladianbaronsRetainers.effectedSkills = new List<SkillObject>()
+            menuVladianbaronsRetainers.effectedSkills = new MBList<SkillObject>()
                       {
                         DefaultSkills.Riding,
                         DefaultSkills.Polearm
-                      }; //List<SkillObject>
+                      }; //MBList<SkillObject>
             menuVladianbaronsRetainers.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuVladianbaronsRetainers.focusToAdd = characterCreationContent.FocusToAdd;
             menuVladianbaronsRetainers.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -217,11 +218,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuVladianbaronsRetainers.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuVladianUrbanMerchants = new CMenuOption(new TextObject("{=651FhzdR}Urban merchants"), new TextObject("{=qNZFkxJb}Your family were merchants in one of the main cities of the kingdom. They organized caravans to nearby towns and were active in the local merchant's guild."));
-            menuVladianUrbanMerchants.effectedSkills = new List<SkillObject>()
+            menuVladianUrbanMerchants.effectedSkills = new MBList<SkillObject>()
                       {
                         DefaultSkills.Trade,
                         DefaultSkills.Charm
-                      }; //List<SkillObject>
+                      }; //MBList<SkillObject>
             menuVladianUrbanMerchants.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuVladianUrbanMerchants.focusToAdd = characterCreationContent.FocusToAdd;
             menuVladianUrbanMerchants.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -231,11 +232,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuVladianUrbanMerchants.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuVladianYeomen = new CMenuOption(new TextObject("{=RDfXuVxT}Yeomen"), new TextObject("{=BLZ4mdhb}Your family were small farmers with just enough land to feed themselves and make a small profit. People like them were the pillars of the kingdom's economy, as well as the backbone of the levy."));
-            menuVladianYeomen.effectedSkills = new List<SkillObject>()
+            menuVladianYeomen.effectedSkills = new MBList<SkillObject>()
                       {
                         DefaultSkills.Polearm,
                         DefaultSkills.Crossbow
-                      }; //List<SkillObject>
+                      }; //MBList<SkillObject>
             menuVladianYeomen.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuVladianYeomen.focusToAdd = characterCreationContent.FocusToAdd;
             menuVladianYeomen.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -245,11 +246,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuVladianYeomen.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuVladianUrbanBlacksmith = new CMenuOption(new TextObject("{=p2KIhGbE}Urban blacksmith"), new TextObject("{=btsMpRcA}Your family owned a smithy in a city. Your father played an active if minor role in the town council, and also served in the militia."));
-            menuVladianUrbanBlacksmith.effectedSkills = new List<SkillObject>()
+            menuVladianUrbanBlacksmith.effectedSkills = new MBList<SkillObject>()
                       {
                         DefaultSkills.Crafting,
                         DefaultSkills.TwoHanded
-                      }; //List<SkillObject>
+                      }; //MBList<SkillObject>
             menuVladianUrbanBlacksmith.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuVladianUrbanBlacksmith.focusToAdd = characterCreationContent.FocusToAdd;
             menuVladianUrbanBlacksmith.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -259,11 +260,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuVladianUrbanBlacksmith.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuVladianHunters = new CMenuOption(new TextObject("{=YcnK0Thk}Hunters"), new TextObject("{=yRFSzSDZ}Your family lived in a village, but did not own their own land. Instead, your father supplemented paid jobs with long trips in the woods, hunting and trapping, always keeping a wary eye for the lord's game wardens."));
-            menuVladianHunters.effectedSkills = new List<SkillObject>()
+            menuVladianHunters.effectedSkills = new MBList<SkillObject>()
                       {
                         DefaultSkills.Scouting,
                         DefaultSkills.Crossbow
-                      }; //List<SkillObject>
+                      }; //MBList<SkillObject>
             menuVladianHunters.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuVladianHunters.focusToAdd = characterCreationContent.FocusToAdd;
             menuVladianHunters.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -273,11 +274,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuVladianHunters.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuVladianMercenaries = new CMenuOption(new TextObject("{=ipQP6aVi}Mercenaries"), new TextObject("{=yYhX6JQC}Your father joined one of Vlandia's many mercenary companies, composed of men who got such a taste for war in their lord's service that they never took well to peace. Their crossbowmen were much valued across Calradia. Your mother was a camp follower, taking you along in the wake of bloody campaigns."));
-            menuVladianMercenaries.effectedSkills = new List<SkillObject>()
+            menuVladianMercenaries.effectedSkills = new MBList<SkillObject>()
                       {
                         DefaultSkills.Roguery,
                         DefaultSkills.Crossbow
-                      }; //List<SkillObject>
+                      }; //MBList<SkillObject>
             menuVladianMercenaries.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuVladianMercenaries.focusToAdd = characterCreationContent.FocusToAdd;
             menuVladianMercenaries.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -303,11 +304,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             List<CMenuOption> SturgianOptinonsList = new List<CMenuOption>();
 
             CMenuOption menuBoyarsCompanions = new CMenuOption(new TextObject("{=mc78FEbA}A boyar's companions"), new TextObject("{=hob3WVkU}Your father was a member of a boyar's druzhina, the 'companions' that make up his retinue. He sat at his lord's table in the great hall, oversaw the boyar's estates, and stood by his side in the center of the shield wall in battle."));
-            menuBoyarsCompanions.effectedSkills = new List<SkillObject>()
+            menuBoyarsCompanions.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.TwoHanded
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuBoyarsCompanions.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuBoyarsCompanions.focusToAdd = characterCreationContent.FocusToAdd;
             menuBoyarsCompanions.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -317,11 +318,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuBoyarsCompanions.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuSturgianUrbanTraders = new CMenuOption(new TextObject("{=HqzVBfpl}Urban traders"), new TextObject("{=bjVMtW3W}Your family were merchants who lived in one of Sturgia's great river ports, organizing the shipment of the north's bounty of furs, honey and other goods to faraway lands."));
-            menuSturgianUrbanTraders.effectedSkills = new List<SkillObject>()
+            menuSturgianUrbanTraders.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Trade,
                     DefaultSkills.Tactics
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuSturgianUrbanTraders.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuSturgianUrbanTraders.focusToAdd = characterCreationContent.FocusToAdd;
             menuSturgianUrbanTraders.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -331,11 +332,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuSturgianUrbanTraders.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuSturgianFreeFarmers = new CMenuOption(new TextObject("{=zrpqSWSh}Free farmers"), new TextObject("{=Mcd3ZyKq}Your family had just enough land to feed themselves and make a small profit. People like them were the pillars of the kingdom's economy, as well as the backbone of the levy."));
-            menuSturgianFreeFarmers.effectedSkills = new List<SkillObject>()
+            menuSturgianFreeFarmers.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Athletics,
                     DefaultSkills.Polearm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuSturgianFreeFarmers.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuSturgianFreeFarmers.focusToAdd = characterCreationContent.FocusToAdd;
             menuSturgianFreeFarmers.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -345,11 +346,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuSturgianFreeFarmers.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuSturgianUrbanArtisans = new CMenuOption(new TextObject("{=v48N6h1t}Urban artisans"), new TextObject("{=ueCm5y1C}Your family owned their own workshop in a city, making goods from raw materials brought in from the countryside. Your father played an active if minor role in the town council, and also served in the militia."));
-            menuSturgianUrbanArtisans.effectedSkills = new List<SkillObject>()
+            menuSturgianUrbanArtisans.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Crafting,
                     DefaultSkills.OneHanded
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuSturgianUrbanArtisans.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuSturgianUrbanArtisans.focusToAdd = characterCreationContent.FocusToAdd;
             menuSturgianUrbanArtisans.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -359,11 +360,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuSturgianUrbanArtisans.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuSturgianHunters = new CMenuOption(new TextObject("{=YcnK0Thk}Hunters"), new TextObject("{=WyZ2UtFF}Your family had no taste for the authority of the boyars. They made their living deep in the woods, slashing and burning fields which they tended for a year or two before moving on. They hunted and trapped fox, hare, ermine, and other fur-bearing animals."));
-            menuSturgianHunters.effectedSkills = new List<SkillObject>()
+            menuSturgianHunters.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Scouting,
                     DefaultSkills.Bow
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuSturgianHunters.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuSturgianHunters.focusToAdd = characterCreationContent.FocusToAdd;
             menuSturgianHunters.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -373,11 +374,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuSturgianHunters.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuSturgianVagabonds = new CMenuOption(new TextObject("{=TPoK3GSj}Vagabonds"), new TextObject("{=2SDWhGmQ}Your family numbered among the poor migrants living in the slums that grow up outside the walls of the river cities, making whatever money they could from a variety of odd jobs. Sometimes they did services for one of the region's many criminal gangs."));
-            menuSturgianVagabonds.effectedSkills = new List<SkillObject>()
+            menuSturgianVagabonds.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Roguery,
                     DefaultSkills.Throwing
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuSturgianVagabonds.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuSturgianVagabonds.focusToAdd = characterCreationContent.FocusToAdd;
             menuSturgianVagabonds.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -402,11 +403,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             List<CMenuOption> AseraiOptinonsList = new List<CMenuOption>();
 
             CMenuOption menuKinsfolkofanEmir = new CMenuOption(new TextObject("{=Sw8OxnNr}Kinsfolk of an emir"), new TextObject("{=MFrIHJZM}Your family was from a smaller offshoot of an emir's tribe. Your father's land gave him enough income to afford a horse but he was not quite wealthy enough to buy the armor needed to join the heavier cavalry. He fought as one of the light horsemen for which the desert is famous."));
-            menuKinsfolkofanEmir.effectedSkills = new List<SkillObject>()
+            menuKinsfolkofanEmir.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Throwing
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuKinsfolkofanEmir.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuKinsfolkofanEmir.focusToAdd = characterCreationContent.FocusToAdd;
             menuKinsfolkofanEmir.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -416,11 +417,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuKinsfolkofanEmir.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuWarriorSlaves = new CMenuOption(new TextObject("{=ngFVgwDD}Warrior-slaves"), new TextObject("{=GsPC2MgU}Your father was part of one of the slave-bodyguards maintained by the Aserai emirs. He fought by his master's side with tribe's armored cavalry, and was freed - perhaps for an act of valor, or perhaps he paid for his freedom with his share of the spoils of battle. He then married your mother."));
-            menuWarriorSlaves.effectedSkills = new List<SkillObject>()
+            menuWarriorSlaves.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Polearm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuWarriorSlaves.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuWarriorSlaves.focusToAdd = characterCreationContent.FocusToAdd;
             menuWarriorSlaves.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -430,11 +431,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuWarriorSlaves.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuAseraiUrbanMerchants = new CMenuOption(new TextObject("{=651FhzdR}Urban merchants"), new TextObject("{=1zXrlaav}Your family were respected traders in an oasis town. They ran caravans across the desert, and were experts in the finer points of negotiating passage through the desert tribes' territories."));
-            menuAseraiUrbanMerchants.effectedSkills = new List<SkillObject>()
+            menuAseraiUrbanMerchants.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Trade,
                     DefaultSkills.Charm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuAseraiUrbanMerchants.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuAseraiUrbanMerchants.focusToAdd = characterCreationContent.FocusToAdd;
             menuAseraiUrbanMerchants.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -444,11 +445,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuAseraiUrbanMerchants.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuOasisFarmers = new CMenuOption(new TextObject("{=g31pXuqi}Oasis farmers"), new TextObject("{=5P0KqBAw}Your family tilled the soil in one of the oases of the Nahasa and tended the palm orchards that produced the desert's famous dates. Your father was a member of the main foot levy of his tribe, fighting with his kinsmen under the emir's banner."));
-            menuOasisFarmers.effectedSkills = new List<SkillObject>()
+            menuOasisFarmers.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Athletics,
                     DefaultSkills.OneHanded
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuOasisFarmers.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuOasisFarmers.focusToAdd = characterCreationContent.FocusToAdd;
             menuOasisFarmers.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -458,11 +459,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuOasisFarmers.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuBedouin = new CMenuOption(new TextObject("{=EEedqolz}Bedouin"), new TextObject("{=PKhcPbBX}Your family were part of a nomadic clan, crisscrossing the wastes between wadi beds and wells to feed their herds of goats and camels on the scraggly scrubs of the Nahasa."));
-            menuBedouin.effectedSkills = new List<SkillObject>()
+            menuBedouin.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Scouting,
                     DefaultSkills.Bow
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuBedouin.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuBedouin.focusToAdd = characterCreationContent.FocusToAdd;
             menuBedouin.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -472,11 +473,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuBedouin.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuAseraiBackAlleyThugs = new CMenuOption(new TextObject("{=tRIrbTvv}Urban back-alley thugs"), new TextObject("{=6bUSbsKC}Your father worked for a fitiwi, one of the strongmen who keep order in the poorer quarters of the oasis towns. He resolved disputes over land, dice and insults, imposing his authority with the fitiwi's traditional staff."));
-            menuAseraiBackAlleyThugs.effectedSkills = new List<SkillObject>()
+            menuAseraiBackAlleyThugs.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Roguery,
                     DefaultSkills.Polearm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuAseraiBackAlleyThugs.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuAseraiBackAlleyThugs.focusToAdd = characterCreationContent.FocusToAdd;
             menuAseraiBackAlleyThugs.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -501,11 +502,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             List<CMenuOption> BattaniaOptinonsList = new List<CMenuOption>();
 
             CMenuOption menuchieftainsHearthguard = new CMenuOption(new TextObject("{=GeNKQlHR}Members of the chieftain's hearthguard"), new TextObject("{=LpH8SYFL}Your family were the trusted kinfolk of a Battanian chieftain, and sat at his table in his great hall. Your father assisted his chief in running the affairs of the clan and trained with the traditional weapons of the Battanian elite, the two-handed sword or falx and the bow."));
-            menuchieftainsHearthguard.effectedSkills = new List<SkillObject>()
+            menuchieftainsHearthguard.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.TwoHanded,
                     DefaultSkills.Bow
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuchieftainsHearthguard.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuchieftainsHearthguard.focusToAdd = characterCreationContent.FocusToAdd;
             menuchieftainsHearthguard.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -515,11 +516,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuchieftainsHearthguard.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuHealers = new CMenuOption(new TextObject("{=AeBzTj6w}Healers"), new TextObject("{=j6py5Rv5}Your parents were healers who gathered herbs and treated the sick. As a living reservoir of Battanian tradition, they were also asked to adjudicate many disputes between the clans."));
-            menuHealers.effectedSkills = new List<SkillObject>()
+            menuHealers.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Medicine,
                     DefaultSkills.Charm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuHealers.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuHealers.focusToAdd = characterCreationContent.FocusToAdd;
             menuHealers.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -529,11 +530,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuHealers.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuTribespeople = new CMenuOption(new TextObject("{=tGEStbxb}Tribespeople"), new TextObject("{=WchH8bS2}Your family were middle-ranking members of a Battanian clan, who tilled their own land. Your father fought with the kern, the main body of his people's warriors, joining in the screaming charges for which the Battanians were famous."));
-            menuTribespeople.effectedSkills = new List<SkillObject>()
+            menuTribespeople.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Athletics,
                     DefaultSkills.Throwing
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuTribespeople.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuTribespeople.focusToAdd = characterCreationContent.FocusToAdd;
             menuTribespeople.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -543,11 +544,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuTribespeople.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuBattaniaSmiths = new CMenuOption(new TextObject("{=BCU6RezA}Smiths"), new TextObject("{=kg9YtrOg}Your family were smiths, a revered profession among the Battanians. They crafted everything from fine filigree jewelry in geometric designs to the well-balanced longswords favored by the Battanian aristocracy."));
-            menuBattaniaSmiths.effectedSkills = new List<SkillObject>()
+            menuBattaniaSmiths.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Crafting,
                     DefaultSkills.TwoHanded
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuBattaniaSmiths.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuBattaniaSmiths.focusToAdd = characterCreationContent.FocusToAdd;
             menuBattaniaSmiths.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -557,11 +558,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuBattaniaSmiths.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuBattaniaForesters = new CMenuOption(new TextObject("{=7eWmU2mF}Foresters"), new TextObject("{=7jBroUUQ}Your family had little land of their own, so they earned their living from the woods, hunting and trapping. They taught you from an early age that skills like finding game trails and killing an animal with one shot could make the difference between eating and starvation."));
-            menuBattaniaForesters.effectedSkills = new List<SkillObject>()
+            menuBattaniaForesters.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Scouting,
                     DefaultSkills.Tactics
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuBattaniaForesters.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuBattaniaForesters.focusToAdd = characterCreationContent.FocusToAdd;
             menuBattaniaForesters.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -571,11 +572,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuBattaniaForesters.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuBards = new CMenuOption(new TextObject("{=SpJqhEEh}Bards"), new TextObject("{=aVzcyhhy}Your father was a bard, drifting from chieftain's hall to chieftain's hall making his living singing the praises of one Battanian aristocrat and mocking his enemies, then going to his enemy's hall and doing the reverse. You learned from him that a clever tongue could spare you  from a life toiling in the fields, if you kept your wits about you."));
-            menuBards.effectedSkills = new List<SkillObject>()
+            menuBards.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Roguery,
                     DefaultSkills.Charm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuBards.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuBards.focusToAdd = characterCreationContent.FocusToAdd;
             menuBards.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -601,11 +602,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             List<CMenuOption> KhuzaitOptinonsList = new List<CMenuOption>();
 
             CMenuOption menuNoyansKinsfolk = new CMenuOption(new TextObject("{=FVaRDe2a}A noyan's kinsfolk"), new TextObject("{=jAs3kDXh}Your family were the trusted kinsfolk of a Khuzait noyan, and shared his meals in the chieftain's yurt. Your father assisted his chief in running the affairs of the clan and fought in the core of armored lancers in the center of the Khuzait battle line."));
-            menuNoyansKinsfolk.effectedSkills = new List<SkillObject>()
+            menuNoyansKinsfolk.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Riding,
                     DefaultSkills.Polearm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuNoyansKinsfolk.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuNoyansKinsfolk.focusToAdd = characterCreationContent.FocusToAdd;
             menuNoyansKinsfolk.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -615,11 +616,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuNoyansKinsfolk.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuKhuzaitMerchants = new CMenuOption(new TextObject("{=TkgLEDRM}Merchants"), new TextObject("{=qPg3IDiq}Your family came from one of the merchant clans that dominated the cities in eastern Calradia before the Khuzait conquest. They adjusted quickly to their new masters, keeping the caravan routes running and ensuring that the tariff revenues that once went into imperial coffers now flowed to the khanate."));
-            menuKhuzaitMerchants.effectedSkills = new List<SkillObject>()
+            menuKhuzaitMerchants.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Trade,
                     DefaultSkills.Charm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuKhuzaitMerchants.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menuKhuzaitMerchants.focusToAdd = characterCreationContent.FocusToAdd;
             menuKhuzaitMerchants.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -629,11 +630,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuKhuzaitMerchants.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuKhuzaitTribespeople = new CMenuOption(new TextObject("{=tGEStbxb}Tribespeople"), new TextObject("{=URgZ4ai4}Your family were middle-ranking members of one of the Khuzait clans. He had some  herds of his own, but was not rich. When the Khuzait horde was summoned to battle, he fought with the horse archers, shooting and wheeling and wearing down the enemy before the lancers delivered the final punch."));
-            menuKhuzaitTribespeople.effectedSkills = new List<SkillObject>()
+            menuKhuzaitTribespeople.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Bow,
                     DefaultSkills.Riding
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuKhuzaitTribespeople.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuKhuzaitTribespeople.focusToAdd = characterCreationContent.FocusToAdd;
             menuKhuzaitTribespeople.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -643,11 +644,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuKhuzaitTribespeople.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuKhuzaitFarmers = new CMenuOption(new TextObject("{=gQ2tAvCz}Farmers"), new TextObject("{=5QSGoRFj}Your family tilled one of the small patches of arable land in the steppes for generations. When the Khuzaits came, they ceased paying taxes to the emperor and providing conscripts for his army, and served the khan instead."));
-            menuKhuzaitFarmers.effectedSkills = new List<SkillObject>()
+            menuKhuzaitFarmers.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Polearm,
                     DefaultSkills.Throwing
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuKhuzaitFarmers.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuKhuzaitFarmers.focusToAdd = characterCreationContent.FocusToAdd;
             menuKhuzaitFarmers.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -657,11 +658,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuKhuzaitFarmers.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuKhuzaitShamans = new CMenuOption(new TextObject("{=vfhVveLW}Shamans"), new TextObject("{=WOKNhaG2}Your family were guardians of the sacred traditions of the Khuzaits, channelling the spirits of the wilderness and of the ancestors. They tended the sick and dispensed wisdom, resolving disputes and providing practical advice."));
-            menuKhuzaitShamans.effectedSkills = new List<SkillObject>()
+            menuKhuzaitShamans.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Medicine,
                     DefaultSkills.Charm
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuKhuzaitShamans.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuKhuzaitShamans.focusToAdd = characterCreationContent.FocusToAdd;
             menuKhuzaitShamans.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -671,11 +672,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuKhuzaitShamans.onApply = new CharacterCreationApplyFinalEffects(this.FinalizeParents);//CharacterCreationApplyFinalEffects
 
             CMenuOption menuKhuzaitNomads = new CMenuOption(new TextObject("{=Xqba1Obq}Nomads"), new TextObject("{=9aoQYpZs}Your family's clan never pledged its loyalty to the khan and never settled down, preferring to live out in the deep steppe away from his authority. They remain some of the finest trackers and scouts in the grasslands, as the ability to spot an enemy coming and move quickly is often all that protects their herds from their neighbors' predations."));
-            menuKhuzaitNomads.effectedSkills = new List<SkillObject>()
+            menuKhuzaitNomads.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Scouting,
                     DefaultSkills.Riding
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuKhuzaitNomads.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuKhuzaitNomads.focusToAdd = characterCreationContent.FocusToAdd;
             menuKhuzaitNomads.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;

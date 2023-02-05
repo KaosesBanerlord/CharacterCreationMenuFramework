@@ -11,6 +11,7 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.CampaignSystem.CharacterDevelopment;
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 using TaleWorlds.Localization;
 using static CharacterCreationMenuFramework.Enums;
 
@@ -19,7 +20,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
     public class Adulthood : ICustomMenu
     {
         public string Id => "native_adult";
-        public TextObject title => new TextObject("{=MafIe9yI}Young Adulthood");
+        public TextObject title => new TextObject("{=MafIe9yI}Native Young Adulthood");
         /*        private TextObject _title = new TextObject("{=b4lDDcli}Kaoses Family");
                 public TextObject title { get => _title; set => _title = value }*/
         public TextObject description => new TextObject("{=4WYY0X59}Before you set out for a life of adventure, your biggest achievement was...");
@@ -59,11 +60,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
         {
 
             CMenuOption menuDefeatedAnEnemy = new CMenuOption(new TextObject("{=8bwpVpgy}you defeated an enemy in battle."), new TextObject("{=1IEroJKs}Not everyone who musters for the levy marches to war, and not everyone who goes on campaign sees action. You did both, and you also took down an enemy warrior in direct one-to-one combat, in the full view of your comrades."));
-            menuDefeatedAnEnemy.effectedSkills = new List<SkillObject>()
+            menuDefeatedAnEnemy.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.OneHanded,
                     DefaultSkills.TwoHanded
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuDefeatedAnEnemy.effectedAttribute = DefaultCharacterAttributes.Vigor; //CharacterAttribute
             menuDefeatedAnEnemy.focusToAdd = characterCreationContent.FocusToAdd;
             menuDefeatedAnEnemy.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -71,7 +72,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuDefeatedAnEnemy.optionCondition = (CharacterCreationOnCondition)null;//CharacterCreationOnCondition
             menuDefeatedAnEnemy.onSelect = new CharacterCreationOnSelect(this.AccomplishmentDefeatedEnemyOnConsequence);//CharacterCreationOnSelect
             menuDefeatedAnEnemy.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentDefeatedEnemyOnApply);//CharacterCreationApplyFinalEffects
-            menuDefeatedAnEnemy.effectedTraits = new List<TraitObject>()
+            menuDefeatedAnEnemy.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Valor
                   };
@@ -80,11 +81,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuDefeatedAnEnemy.Id = "na_defeatedenemyinbattle";
 
             CMenuOption menuManHunt = new CMenuOption(new TextObject("{=mP3uFbcq}you led a successful manhunt."), new TextObject("{=4f5xwzX0}When your community needed to organize a posse to pursue horse thieves, you were the obvious choice. You hunted down the raiders, surrounded them and forced their surrender, and took back your stolen property."));
-            menuManHunt.effectedSkills = new List<SkillObject>()
+            menuManHunt.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Tactics,
                     DefaultSkills.Leadership
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuManHunt.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuManHunt.focusToAdd = characterCreationContent.FocusToAdd;
             menuManHunt.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -92,7 +93,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuManHunt.optionCondition = new CharacterCreationOnCondition(this.AccomplishmentPosseOnConditions);//CharacterCreationOnCondition
             menuManHunt.onSelect = new CharacterCreationOnSelect(this.AccomplishmentExpeditionOnConsequence);//CharacterCreationOnSelect
             menuManHunt.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentExpeditionOnApply);//CharacterCreationApplyFinalEffects
-            menuManHunt.effectedTraits = new List<TraitObject>()
+            menuManHunt.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   };
@@ -101,11 +102,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuManHunt.Id = "na_ledsuccessfulmanhunt";
 
             CMenuOption menuLedCaravan = new CMenuOption(new TextObject("{=wfbtS71d}you led a caravan."), new TextObject("{=joRHKCkm}Your family needed someone trustworthy to take a caravan to a neighboring town. You organized supplies, ensured a constant watch to keep away bandits, and brought it safely to its destination."));
-            menuLedCaravan.effectedSkills = new List<SkillObject>()
+            menuLedCaravan.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Tactics,
                     DefaultSkills.Leadership
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuLedCaravan.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuLedCaravan.focusToAdd = characterCreationContent.FocusToAdd;
             menuLedCaravan.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -113,7 +114,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuLedCaravan.optionCondition = new CharacterCreationOnCondition(this.AccomplishmentMerchantOnCondition);//CharacterCreationOnCondition
             menuLedCaravan.onSelect = new CharacterCreationOnSelect(this.AccomplishmentMerchantOnConsequence);//CharacterCreationOnSelect
             menuLedCaravan.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentExpeditionOnApply);//CharacterCreationApplyFinalEffects
-            menuLedCaravan.effectedTraits = new List<TraitObject>()
+            menuLedCaravan.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   };
@@ -122,11 +123,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuLedCaravan.Id = "na_ledacaravan";
 
             CMenuOption menuSavedVillageFromFlood = new CMenuOption(new TextObject("{=x1HTX5hq}you saved your village from a flood."), new TextObject("{=bWlmGDf3}When a sudden storm caused the local stream to rise suddenly, your neighbors needed quick-thinking leadership. You provided it, directing them to build levees to save their homes."));
-            menuSavedVillageFromFlood.effectedSkills = new List<SkillObject>()
+            menuSavedVillageFromFlood.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Tactics,
                     DefaultSkills.Leadership
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuSavedVillageFromFlood.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuSavedVillageFromFlood.focusToAdd = characterCreationContent.FocusToAdd;
             menuSavedVillageFromFlood.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -134,7 +135,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuSavedVillageFromFlood.optionCondition = new CharacterCreationOnCondition(this.AccomplishmentSavedVillageOnCondition);//CharacterCreationOnCondition
             menuSavedVillageFromFlood.onSelect = new CharacterCreationOnSelect(this.AccomplishmentSavedVillageOnConsequence);//CharacterCreationOnSelect
             menuSavedVillageFromFlood.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentExpeditionOnApply);//CharacterCreationApplyFinalEffects
-            menuSavedVillageFromFlood.effectedTraits = new List<TraitObject>()
+            menuSavedVillageFromFlood.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   };
@@ -143,11 +144,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuSavedVillageFromFlood.Id = "na_savedvillagefromflood";
 
             CMenuOption menuSavedCityFromFire = new CMenuOption(new TextObject("{=s8PNllPN}you saved your city quarter from a fire."), new TextObject("{=ZAGR6PYc}When a sudden blaze broke out in a back alley, your neighbors needed quick-thinking leadership and you provided it. You organized a bucket line to the nearest well, putting the fire out before any homes were lost."));
-            menuSavedCityFromFire.effectedSkills = new List<SkillObject>()
+            menuSavedCityFromFire.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Tactics,
                     DefaultSkills.Leadership
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuSavedCityFromFire.effectedAttribute = DefaultCharacterAttributes.Cunning; //CharacterAttribute
             menuSavedCityFromFire.focusToAdd = characterCreationContent.FocusToAdd;
             menuSavedCityFromFire.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -155,7 +156,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuSavedCityFromFire.optionCondition = new CharacterCreationOnCondition(this.AccomplishmentSavedStreetOnCondition);//CharacterCreationOnCondition
             menuSavedCityFromFire.onSelect = new CharacterCreationOnSelect(this.AccomplishmentSavedStreetOnConsequence);//CharacterCreationOnSelect
             menuSavedCityFromFire.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentExpeditionOnApply);//CharacterCreationApplyFinalEffects
-            menuSavedCityFromFire.effectedTraits = new List<TraitObject>()
+            menuSavedCityFromFire.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   };
@@ -164,11 +165,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuSavedCityFromFire.Id = "na_savedcityfromfire";
 
             CMenuOption menuInvestedInWorkshop = new CMenuOption(new TextObject("{=xORjDTal}you invested some money in a workshop."), new TextObject("{=PyVqDLBu}Your parents didn't give you much money, but they did leave just enough for you to secure a loan against a larger amount to build a small workshop. You paid back what you borrowed, and sold your enterprise for a profit."));
-            menuInvestedInWorkshop.effectedSkills = new List<SkillObject>()
+            menuInvestedInWorkshop.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Trade,
                     DefaultSkills.Crafting
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuInvestedInWorkshop.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuInvestedInWorkshop.focusToAdd = characterCreationContent.FocusToAdd;
             menuInvestedInWorkshop.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -176,7 +177,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuInvestedInWorkshop.optionCondition = new CharacterCreationOnCondition(this.AccomplishmentUrbanOnCondition);//CharacterCreationOnCondition
             menuInvestedInWorkshop.onSelect = new CharacterCreationOnSelect(this.AccomplishmentWorkshopOnConsequence);//CharacterCreationOnSelect
             menuInvestedInWorkshop.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentWorkshopOnApply);//CharacterCreationApplyFinalEffects
-            menuInvestedInWorkshop.effectedTraits = new List<TraitObject>()
+            menuInvestedInWorkshop.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   };
@@ -185,11 +186,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuInvestedInWorkshop.Id = "na_investedmoneyworkshop";
 
             CMenuOption menuInvestedInLand = new CMenuOption(new TextObject("{=xKXcqRJI}you invested some money in land."), new TextObject("{=cbF9jdQo}Your parents didn't give you much money, but they did leave just enough for you to purchase a plot of unused land at the edge of the village. You cleared away rocks and dug an irrigation ditch, raised a few seasons of crops, than sold it for a considerable profit."));
-            menuInvestedInLand.effectedSkills = new List<SkillObject>()
+            menuInvestedInLand.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Trade,
                     DefaultSkills.Crafting
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuInvestedInLand.effectedAttribute = DefaultCharacterAttributes.Intelligence; //CharacterAttribute
             menuInvestedInLand.focusToAdd = characterCreationContent.FocusToAdd;
             menuInvestedInLand.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -197,7 +198,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuInvestedInLand.optionCondition = new CharacterCreationOnCondition(this.AccomplishmentRuralOnCondition);//CharacterCreationOnCondition
             menuInvestedInLand.onSelect = new CharacterCreationOnSelect(this.AccomplishmentWorkshopOnConsequence);//CharacterCreationOnSelect
             menuInvestedInLand.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentWorkshopOnApply);//CharacterCreationApplyFinalEffects
-            menuInvestedInLand.effectedTraits = new List<TraitObject>()
+            menuInvestedInLand.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Calculating
                   };
@@ -206,11 +207,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuInvestedInLand.Id = "na_investedmoneyland";
 
             CMenuOption menuHuntedDangerousAnimal = new CMenuOption(new TextObject("{=TbNRtUjb}you hunted a dangerous animal."), new TextObject("{=I3PcdaaL}Wolves, bears are a constant menace to the flocks of northern Calradia, while hyenas and leopards trouble the south. You went with a group of your fellow villagers and fired the missile that brought down the beast."));
-            menuHuntedDangerousAnimal.effectedSkills = new List<SkillObject>()
+            menuHuntedDangerousAnimal.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Polearm,
                     DefaultSkills.Crossbow
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuHuntedDangerousAnimal.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuHuntedDangerousAnimal.focusToAdd = characterCreationContent.FocusToAdd;
             menuHuntedDangerousAnimal.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -218,7 +219,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuHuntedDangerousAnimal.optionCondition = new CharacterCreationOnCondition(this.AccomplishmentRuralOnCondition);//CharacterCreationOnCondition
             menuHuntedDangerousAnimal.onSelect = new CharacterCreationOnSelect(this.AccomplishmentSiegeHunterOnConsequence);//CharacterCreationOnSelect
             menuHuntedDangerousAnimal.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentSiegeHunterOnApply);//CharacterCreationApplyFinalEffects
-            menuHuntedDangerousAnimal.effectedTraits = new List<TraitObject>()
+            menuHuntedDangerousAnimal.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Valor
                   };
@@ -227,11 +228,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuHuntedDangerousAnimal.Id = "na_huntedadangerousanimal";
 
             CMenuOption menuSurvivedSiege = new CMenuOption(new TextObject("{=WbHfGCbd}you survived a siege."), new TextObject("{=FhZPjhli}Your hometown was briefly placed under siege, and you were called to defend the walls. Everyone did their part to repulse the enemy assault, and everyone is justly proud of what they endured."));
-            menuSurvivedSiege.effectedSkills = new List<SkillObject>()
+            menuSurvivedSiege.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Bow,
                     DefaultSkills.Crossbow
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuSurvivedSiege.effectedAttribute = DefaultCharacterAttributes.Control; //CharacterAttribute
             menuSurvivedSiege.focusToAdd = characterCreationContent.FocusToAdd;
             menuSurvivedSiege.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -243,11 +244,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuSurvivedSiege.Id = "na_survivedsiege";
 
             CMenuOption menuFamousEscapade = new CMenuOption(new TextObject("{=kNXet6Um}you had a famous escapade in town."), new TextObject("{=DjeAJtix}Maybe it was a love affair, or maybe you cheated at dice, or maybe you just chose your words poorly when drinking with a dangerous crowd. Anyway, on one of your trips into town you got into the kind of trouble from which only a quick tongue or quick feet get you out alive."));
-            menuFamousEscapade.effectedSkills = new List<SkillObject>()
+            menuFamousEscapade.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Athletics,
                     DefaultSkills.Roguery
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuFamousEscapade.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuFamousEscapade.focusToAdd = characterCreationContent.FocusToAdd;
             menuFamousEscapade.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -255,7 +256,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuFamousEscapade.optionCondition = new CharacterCreationOnCondition(this.AccomplishmentRuralOnCondition);//CharacterCreationOnCondition
             menuFamousEscapade.onSelect = new CharacterCreationOnSelect(this.AccomplishmentEscapadeOnConsequence);//CharacterCreationOnSelect
             menuFamousEscapade.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentEscapadeOnApply);//CharacterCreationApplyFinalEffects
-            menuFamousEscapade.effectedTraits = new List<TraitObject>()
+            menuFamousEscapade.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Valor
                   };
@@ -264,11 +265,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuFamousEscapade.Id = "na_famousescapadeintown";
 
             CMenuOption menuFamousEscapade2 = new CMenuOption(new TextObject("{=qlOuiKXj}you had a famous escapade."), new TextObject("{=lD5Ob3R4}Maybe it was a love affair, or maybe you cheated at dice, or maybe you just chose your words poorly when drinking with a dangerous crowd. Anyway, you got into the kind of trouble from which only a quick tongue or quick feet get you out alive."));
-            menuFamousEscapade2.effectedSkills = new List<SkillObject>()
+            menuFamousEscapade2.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Athletics,
                     DefaultSkills.Roguery
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menuFamousEscapade2.effectedAttribute = DefaultCharacterAttributes.Endurance; //CharacterAttribute
             menuFamousEscapade2.focusToAdd = characterCreationContent.FocusToAdd;
             menuFamousEscapade2.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -276,7 +277,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuFamousEscapade2.optionCondition = new CharacterCreationOnCondition(this.AccomplishmentUrbanOnCondition);//CharacterCreationOnCondition
             menuFamousEscapade2.onSelect = new CharacterCreationOnSelect(this.AccomplishmentEscapadeOnConsequence);//CharacterCreationOnSelect
             menuFamousEscapade2.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentEscapadeOnApply);//CharacterCreationApplyFinalEffects
-            menuFamousEscapade2.effectedTraits = new List<TraitObject>()
+            menuFamousEscapade2.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Valor
                   };
@@ -285,11 +286,11 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuFamousEscapade2.Id = "na_famousescapadeintownother";
 
             CMenuOption menutreatedPeopleWell = new CMenuOption(new TextObject("{=Yqm0Dics}you treated people well."), new TextObject("{=dDmcqTzb}Yours wasn't the kind of reputation that local legends are made of, but it was the kind that wins you respect among those around you. You were consistently fair and honest in your business dealings and helpful to those in trouble. In doing so, you got a sense of what made people tick."));
-            menutreatedPeopleWell.effectedSkills = new List<SkillObject>()
+            menutreatedPeopleWell.effectedSkills = new MBList<SkillObject>()
                   {
                     DefaultSkills.Charm,
                     DefaultSkills.Steward
-                  }; //List<SkillObject>
+                  }; //MBList<SkillObject>
             menutreatedPeopleWell.effectedAttribute = DefaultCharacterAttributes.Social; //CharacterAttribute
             menutreatedPeopleWell.focusToAdd = characterCreationContent.FocusToAdd;
             menutreatedPeopleWell.skillLevelToAdd = characterCreationContent.SkillLevelToAdd;
@@ -297,7 +298,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menutreatedPeopleWell.optionCondition = (CharacterCreationOnCondition)null;//CharacterCreationOnCondition
             menutreatedPeopleWell.onSelect = new CharacterCreationOnSelect(this.AccomplishmentTreaterOnConsequence);//CharacterCreationOnSelect
             menutreatedPeopleWell.onApply = new CharacterCreationApplyFinalEffects(this.AccomplishmentTreaterOnApply);//CharacterCreationApplyFinalEffects
-            menutreatedPeopleWell.effectedTraits = new List<TraitObject>()
+            menutreatedPeopleWell.effectedTraits = new MBList<TraitObject>()
                   {
                     DefaultTraits.Mercy,
                     DefaultTraits.Generosity,

@@ -32,7 +32,7 @@ namespace CharacterCreationMenuFramework.Patches
                 }
                 codesToInsert.Add(new CodeInstruction(OpCodes.Ldarg_1));
                 codesToInsert.Add(new CodeInstruction(OpCodes.Ldarg, 5));
-                codesToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(CSPatchCharacterCreationOption), "RemoveZeroPointText", new Type[] { typeof(string), typeof(List<SkillObject>), typeof(int) })));
+                codesToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(CSPatchCharacterCreationOption), "RemoveZeroPointText", new Type[] { typeof(string), typeof(MBList<SkillObject>), typeof(int) })));
                 foreach (CodeInstruction codeAtIndex in codesAtIndex)
                 {
                     codes.InsertRange(codes.IndexOf(codeAtIndex), codesToInsert);
@@ -41,7 +41,7 @@ namespace CharacterCreationMenuFramework.Patches
             }
 
             // Remove redundant text if the attribute points to add is 0.
-            private static TextObject RemoveZeroPointText(string text, List<SkillObject> skills, int attributeLevelToAdd)
+            private static TextObject RemoveZeroPointText(string text, MBList<SkillObject> skills, int attributeLevelToAdd)
             {
                 if (attributeLevelToAdd == 0)
                 {

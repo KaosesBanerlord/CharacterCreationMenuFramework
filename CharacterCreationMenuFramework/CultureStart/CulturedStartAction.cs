@@ -168,7 +168,8 @@ namespace CharacterCreationMenuFramework.CultureStart
                                                select settlement).GetRandomElementInefficiently();
                 Hero companion = HeroCreator.CreateSpecialHero(wanderer, randomSettlement, null, null, 33);
                 companion.HeroDeveloper.DeriveSkillsFromTraits(false, wanderer);
-                companion.HasMet = true;
+                companion.SetHasMet();
+                //companion.SetHasMet();
                 companion.ChangeState(Hero.CharacterStates.Active);
                 if (idealTroop != null)
                 {

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 using TaleWorlds.Localization;
 using static CharacterCreationMenuFramework.Enums;
 using static TaleWorlds.MountAndBlade.SpawnerEntityEditorHelper;
@@ -19,7 +20,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
     {
         public string Id => "native_ageslection";
 
-        public TextObject title => new TextObject("{=HDFEAYDk}Starting Age");
+        public TextObject title => new TextObject("{=HDFEAYDk}Native Starting Age");
 
         public TextObject description => new TextObject("{=VlOGrGSn}Your character started off on the adventuring path at the age of...");
 
@@ -62,7 +63,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
         protected void BuildMenuOptions(CharacterCreation characterCreation, KaosesStoryModeCharacterCreationContent characterCreationContent)
         {
             CMenuOption menuStartingAgeYoung = new CMenuOption(new TextObject("{=!}" + this.StartingYoungAdultAge), new TextObject("{=2k7adlh7}While lacking experience a bit, you are full with youthful energy, you are fully eager, for the long years of adventuring ahead."));
-            menuStartingAgeYoung.effectedSkills = new List<SkillObject>(); //List<SkillObject>
+            menuStartingAgeYoung.effectedSkills = new MBList<SkillObject>(); //MBList<SkillObject>
             menuStartingAgeYoung.effectedAttribute = (CharacterAttribute)null; //CharacterAttribute
             menuStartingAgeYoung.focusToAdd = 0;
             menuStartingAgeYoung.skillLevelToAdd = 0;
@@ -75,7 +76,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuStartingAgeYoung.Id = "na_startingageyoung";
 
             CMenuOption menuStartingAgeAdult = new CMenuOption(new TextObject("{=!}" + this.StartingAdultAge), new TextObject("{=NUlVFRtK}You are at your prime, You still have some youthful energy but also have a substantial amount of experience under your belt. "));
-            menuStartingAgeAdult.effectedSkills = new List<SkillObject>(); //List<SkillObject>
+            menuStartingAgeAdult.effectedSkills = new MBList<SkillObject>(); //MBList<SkillObject>
             menuStartingAgeAdult.effectedAttribute = (CharacterAttribute)null; //CharacterAttribute
             menuStartingAgeAdult.focusToAdd = 0;
             menuStartingAgeAdult.skillLevelToAdd = 0;
@@ -88,7 +89,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuStartingAgeAdult.Id = "na_startingageadult";
 
             CMenuOption menuStartingAgeMiddleAged = new CMenuOption(new TextObject("{=!}" + this.StartingMiddleAgedAge), new TextObject("{=5MxTYApM}This is the right age for starting off, you have years of experience, and you are old enough for people to respect you and gather under your banner."));
-            menuStartingAgeMiddleAged.effectedSkills = new List<SkillObject>(); //List<SkillObject>
+            menuStartingAgeMiddleAged.effectedSkills = new MBList<SkillObject>(); //MBList<SkillObject>
             menuStartingAgeMiddleAged.effectedAttribute = (CharacterAttribute)null; //CharacterAttribute
             menuStartingAgeMiddleAged.focusToAdd = 0;
             menuStartingAgeMiddleAged.skillLevelToAdd = 0;
@@ -101,7 +102,7 @@ namespace CharacterCreationMenuFramework.NativeMenus
             menuStartingAgeMiddleAged.Id = "na_startingagemiddleAged";
 
             CMenuOption menuStartingAgeElderly = new CMenuOption(new TextObject("{=!}" + this.StartingElderAge), new TextObject("{=ePD5Afvy}While you are past your prime, there is still enough time to go on that last big adventure for you. And you have all the experience you need to overcome anything!"));
-            menuStartingAgeElderly.effectedSkills = new List<SkillObject>(); //List<SkillObject>
+            menuStartingAgeElderly.effectedSkills = new MBList<SkillObject>(); //MBList<SkillObject>
             menuStartingAgeElderly.effectedAttribute = (CharacterAttribute)null; //CharacterAttribute
             menuStartingAgeElderly.focusToAdd = 0;
             menuStartingAgeElderly.skillLevelToAdd = 0;
