@@ -37,10 +37,6 @@
 
 
 	<ItemGroup Condition="$(ReferenceAssemblies) == 'true'">
-		<Reference Include="$(GameFolder)\bin\Win64_Shipping_Client\Newtonsoft.Json.dll">
-			<HintPath>%(Identity)</HintPath>
-			<Private>False</Private>
-		</Reference>
 		<Reference Include="$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds.*.dll" Exclude="$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds.Native.dll">
 			<HintPath>%(Identity)</HintPath>
 			<Private>False</Private>
